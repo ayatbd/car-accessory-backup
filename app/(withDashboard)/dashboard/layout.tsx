@@ -14,7 +14,7 @@ export default function DashboardLayout({
       {/* Sidebar */}
       <SideBar />
       {/* Main Content Area */}
-      <div className="w-[82.5%]">
+      <div className="min-w-[82.5%]">
         <main className="flex-1">
           {/* Top header */}
           <div className="px-[134px] bg-[#0f0f0f]">

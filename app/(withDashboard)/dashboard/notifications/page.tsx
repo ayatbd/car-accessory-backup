@@ -1,7 +1,11 @@
-import { BellDot } from "lucide-react";
-
 const Notifications = () => {
-  const notifications = [
+  type Notification = {
+    id: string | number;
+    message: string;
+    time: string;
+  };
+
+  const notifications: Notification[] = [
     {
       id: 1,
       message: "You have received $500 from Nova Parker",
