@@ -26,7 +26,7 @@ const SideBar = () => {
         {/* <div className="text-xs">since 2015</div> */}
       </div>
 
-      <nav className={`p-9 space-y-4 ${styles.sidebar}`}>
+      <nav className={`p-9 ${styles.sidebar}`}>
         <Link href="/dashboard">
           <button>
             <span>

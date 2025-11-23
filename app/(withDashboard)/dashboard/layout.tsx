@@ -1,6 +1,6 @@
 "use client";
 // lucid icons
-import { BellRing } from "lucide-react";
+import { Link, UserRound } from "lucide-react";
 import SideBar from "../_components/SideBar";
 import ProfileNotification from "../_components/ProfileNotification";
 
@@ -25,10 +25,7 @@ export default function DashboardLayout({
               <div className="flex items-center gap-[52px]">
                 <ProfileNotification />
                 <div className="w-9 h-9 rounded-lg bg-[#ffff] flex items-center justify-center">
-                  <BellRing
-                    fill="gray"
-                    className="text-gray-500 cursor-pointer"
-                  />
+                  <UserRound className=" text-black cursor-pointer" />
                 </div>
               </div>
             </header>

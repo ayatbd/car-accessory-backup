@@ -1,4 +1,6 @@
+import { Button } from "antd";
 import { BellDot, BellRing } from "lucide-react";
+import Link from "next/link";
 
 const notifications = [
   {
@@ -42,9 +44,9 @@ const ProfileNotification = () => {
   return (
     <div className="w-9 h-9 rounded-lg bg-[#ffff] flex items-center justify-center">
       {/* <UserRound className="text-black cursor-pointer" /> */}
-      <div className="dropdown dropdown-end">
+      <div className="dropdown dropdown-bottom dropdown-end">
         <div tabIndex={0} className="m-1">
-          <BellRing className="text-black cursor-pointer" />
+          <BellRing fill="gray" className="cursor-pointer text-[#545454]" />
         </div>
         <ul className="dropdown-content menu bg-base-100 rounded-sm z-1 w-[506px] p-10 shadow-sm">
           {notifications.map((notification, id) => (
@@ -58,6 +60,22 @@ const ProfileNotification = () => {
               </span>
             </li>
           ))}
+          <div className="text-center mt-9">
+            <Link href="/dashboard/notifications">
+              <Button
+                style={{
+                  backgroundColor: "#222222",
+                  borderRadius: "5px",
+                  color: "#FFE0A7",
+                  fontSize: "18px",
+                  padding: "20px 40px",
+                }}
+                type="primary"
+              >
+                View More
+              </Button>
+            </Link>
+          </div>
         </ul>
       </div>
     </div>
