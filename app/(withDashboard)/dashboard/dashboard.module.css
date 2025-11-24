@@ -25,5 +25,14 @@
     gap: 0.375rem;
 }
 
+/* venodr profile section  */
+
+.vendorTable th span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    /* Adjust the gap as needed */
+}
+
 /* w-full text-left px-3 py-2 rounded hover:bg-[#3E3E3E] */
 /* className="flex items-center justify-start gap-1.5" */

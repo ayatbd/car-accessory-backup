@@ -1,8 +1,9 @@
 "use client";
 // lucid icons
-import { Link, UserRound } from "lucide-react";
+import { UserRound } from "lucide-react";
 import SideBar from "../_components/SideBar";
 import ProfileNotification from "../_components/ProfileNotification";
+import Link from "next/link";
 
 export default function DashboardLayout({
   children,
@@ -25,7 +26,9 @@ export default function DashboardLayout({
               <div className="flex items-center gap-[52px]">
                 <ProfileNotification />
                 <div className="w-9 h-9 rounded-lg bg-[#ffff] flex items-center justify-center">
-                  <UserRound className=" text-black cursor-pointer" />
+                  <Link href="profile">
+                    <UserRound className=" text-black cursor-pointer" />
+                  </Link>
                 </div>
               </div>
             </header>

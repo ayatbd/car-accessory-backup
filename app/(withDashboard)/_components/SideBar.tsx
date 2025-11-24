@@ -10,7 +10,7 @@ import {
   Cog,
   LogOut,
   UsersRound,
-  ChevronDown,
+  CircleUser,
 } from "lucide-react";
 
 import Image from "next/image";
@@ -62,7 +62,7 @@ const SideBar = () => {
               <Link href="/dashboard/vendors">
                 <button>
                   <span className="flex items-center gap-2">
-                    <Wallet /> Vendors
+                    <CircleUser /> Vendors
                   </span>
                 </button>
               </Link>
