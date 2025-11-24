@@ -1,7 +1,9 @@
+import React from "react";
 import { FaSort, FaUsers } from "react-icons/fa";
-import styles from "./../dashboard.module.css";
 import { RiCustomerService2Line } from "react-icons/ri";
-export default function UserManagementContent() {
+import styles from "./../dashboard.module.css";
+
+const UserManagementContent: React.FC = () => {
   return (
     <div className="w-full space-y-7 bg-[#222222] min-h-screen text-white pl-[134px] pt-7 pr-[170px]">
       {/* Statistic Cards */}
@@ -76,25 +78,25 @@ export default function UserManagementContent() {
           </thead>
 
           <tbody>
-            {Array(10)
-              .fill()
-              .map((_, i) => (
-                <tr key={i} className="hover:bg-[#161616]">
-                  <td>#C-004562</td>
-                  <td>26 March 2020, 12:42 AM</td>
-                  <td>Olivia Shine</td>
-                  <td>35 Station Road London</td>
-                  <td>Monthly</td>
-                  <td>
-                    <button className="btn btn-sm bg-[#FFE6B9] text-black border-none hover:bg-[#cfa96e]">
-                      $42.85
-                    </button>
-                  </td>
-                </tr>
-              ))}
+            {Array.from({ length: 10 }).map((_, i: number) => (
+              <tr key={i} className="hover:bg-[#161616]">
+                <td>#C-004562</td>
+                <td>26 March 2020, 12:42 AM</td>
+                <td>Olivia Shine</td>
+                <td>35 Station Road London</td>
+                <td>Monthly</td>
+                <td>
+                  <button className="btn btn-sm bg-[#FFE6B9] text-black border-none hover:bg-[#cfa96e]">
+                    $42.85
+                  </button>
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
     </div>
   );
-}
+};
+
+export default UserManagementContent;

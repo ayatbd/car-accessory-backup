@@ -28,17 +28,17 @@ const page = () => {
             </Link>
           </li>
           <li>
-            <Link href="">
+            <Link href="termofservices">
               Terms of Services <MdArrowForwardIos />
             </Link>
           </li>
           <li>
-            <Link href="">
+            <Link href="aboutus">
               About Us <MdArrowForwardIos />
             </Link>
           </li>
           <li>
-            <Link href="">
+            <Link href="support">
               Support <MdArrowForwardIos />
             </Link>
           </li>
