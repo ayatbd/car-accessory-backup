@@ -37,7 +37,9 @@
 /* settings section styles  */
 
 .listStyle li {
-    border-bottom: 1px solid ray;
+    font-size: 24px;
+    color: #222222;
+    border-bottom: 1px solid gray;
     display: flex;
     align-items: center;
     justify-content: space-between;

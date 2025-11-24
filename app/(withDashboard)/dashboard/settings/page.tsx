@@ -1,31 +1,46 @@
 import { MdArrowForwardIos } from "react-icons/md";
 import styles from "./../dashboard.module.css";
+import Link from "next/link";
 
 const page = () => {
   return (
-    <div className="bg-[#fff5e4] pt-[120px] pl-[134px] min-h-screen">
+    <div className="bg-[#fff5e4] pt-[120px] px-[134px] min-h-screen">
       <div className="">
         <ul className={`space-y-11 ${styles.listStyle}`}>
           <li>
-            Notification <MdArrowForwardIos />
+            <Link href="">
+              Notification <MdArrowForwardIos />
+            </Link>
           </li>
           <li>
-            Change Password <MdArrowForwardIos />
+            <Link href="changepassword">
+              Change Password <MdArrowForwardIos />
+            </Link>
           </li>
           <li>
-            Login Activity <MdArrowForwardIos />
+            <Link href="">
+              Login Activity <MdArrowForwardIos />
+            </Link>
           </li>
           <li>
-            Privacy Policy <MdArrowForwardIos />
+            <Link href="">
+              Privacy Policy <MdArrowForwardIos />
+            </Link>
           </li>
           <li>
-            Terms of Services <MdArrowForwardIos />
+            <Link href="">
+              Terms of Services <MdArrowForwardIos />
+            </Link>
           </li>
           <li>
-            About Us <MdArrowForwardIos />
+            <Link href="">
+              About Us <MdArrowForwardIos />
+            </Link>
           </li>
           <li>
-            Support <MdArrowForwardIos />
+            <Link href="">
+              Support <MdArrowForwardIos />
+            </Link>
           </li>
         </ul>
       </div>
