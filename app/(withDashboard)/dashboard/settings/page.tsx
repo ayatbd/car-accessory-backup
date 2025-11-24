@@ -23,7 +23,7 @@ const page = () => {
             </Link>
           </li>
           <li>
-            <Link href="">
+            <Link href="privacypolicy">
               Privacy Policy <MdArrowForwardIos />
             </Link>
           </li>

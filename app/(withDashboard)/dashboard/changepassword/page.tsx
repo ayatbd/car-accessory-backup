@@ -1,5 +1,4 @@
 import { Button } from "antd";
-import { Pen } from "lucide-react";
 import Link from "next/link";
 
 const ChangePassword = () => {
@@ -14,6 +13,7 @@ const ChangePassword = () => {
             >
               Current Password
             </label>
+
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-[#3E3E3E]"
               id="currentPassword"
@@ -50,7 +50,7 @@ const ChangePassword = () => {
             />
           </div>
           <span className="text-[#EC4236] text-[16px]">
-            <Link href="">Forgot Password</Link>
+            <Link href="forgotpassword">Forgot Password</Link>
           </span>
         </div>
         <Link href="">
