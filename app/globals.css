@@ -1,2 +1,27 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+.custom-swal-popup {
+    padding: 160px 200px !important;
+    /* top-bottom | left-right */
+}
+
+.custom-confirm-btn {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    border: 2px solid #000 !important;
+    padding: 16px 76px !important;
+    border-radius: 8px !important;
+}
+
+.custom-cancel-btn {
+    background: #FFE0A7 !important;
+    color: #000 !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    padding: 16px 76px !important;
+    border-radius: 8px !important;
+    border: none !important;
+}

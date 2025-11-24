@@ -34,5 +34,12 @@
     /* Adjust the gap as needed */
 }
 
-/* w-full text-left px-3 py-2 rounded hover:bg-[#3E3E3E] */
-/* className="flex items-center justify-start gap-1.5" */
+/* settings section styles  */
+
+.listStyle li {
+    border-bottom: 1px solid ray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px
+}
