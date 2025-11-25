@@ -26,8 +26,8 @@ export default function DashboardLayout({
               <div className="flex items-center gap-[52px]">
                 <ProfileNotification />
                 <div className="w-9 h-9 rounded-lg bg-[#ffff] flex items-center justify-center">
-                  <Link href="profile">
-                    <UserRound className=" text-black cursor-pointer" />
+                  <Link href="dashboard/profile">
+                    <UserRound color="#0A0A0A" className=" cursor-pointer" />
                   </Link>
                 </div>
               </div>

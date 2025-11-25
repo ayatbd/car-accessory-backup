@@ -10,7 +10,8 @@ import {
   Bar,
   CartesianGrid,
 } from "recharts";
-import { Users, Headset, UserRound, BellRing } from "lucide-react";
+import { Users, Headset, UserRound } from "lucide-react";
+import { FaSort } from "react-icons/fa";
 
 // NOTE: The Figma screenshot file (provided by you) is referenced below as a local path.
 // The path used: "/mnt/data/Screenshot 2025-11-23 014154.png"
@@ -24,6 +25,7 @@ const lineData = [
   { name: "Apr", a: 40, b: 55 },
   { name: "May", a: 50, b: 65 },
   { name: "Jun", a: 35, b: 45 },
+  { name: "Jul", a: 35, b: 45 },
 ];
 
 const barData = Array.from({ length: 7 }).map((_, i) => ({
@@ -121,8 +123,10 @@ export default function Dashboard() {
           </div>
 
           {/* Lower tables */}
-          <div className="col-span-12 lg:col-span-6 rounded border  p-3">
-            <div className="text-sm text-gray-300 mb-2">Vendor Accounts</div>
+          <div className="col-span-12 text-white lg:col-span-6 rounded border-sm bg-[#0A0A0A] p-3">
+            <div className="text-[20px] text-gray-300 mb-2">
+              Vendor Accounts
+            </div>
             <div className="overflow-auto max-h-56">
               <table className="w-full text-sm text-left">
                 <thead>
@@ -136,7 +140,14 @@ export default function Dashboard() {
                   {Array.from({ length: 8 }).map((_, i) => (
                     <tr key={i} className="border-t border-gray-800">
                       <td className="py-2 px-3">PRE2209</td>
-                      <td className="py-2 px-3">John Smith</td>
+                      <td className="py-2 px-3 flex items-center gap-2">
+                        <div className="avatar avatar-placeholder">
+                          <div className="bg-white text-neutral-content w-5 rounded-full">
+                            <span className="text-xs">UI</span>
+                          </div>
+                        </div>
+                        John Smith
+                      </td>
                       <td className="py-2 px-3">Yearly</td>
                     </tr>
                   ))}
@@ -145,15 +156,27 @@ export default function Dashboard() {
             </div>
           </div>
 
-          <div className="col-span-12 lg:col-span-6 rounded border  p-3">
-            <div className="text-sm text-gray-300 mb-2">User Activity</div>
+          <div className="col-span-12 text-white lg:col-span-6 rounded border bg-[#0A0A0A] p-3">
+            <div className="text-[20px] text-gray-300 mb-2">User Activity</div>
             <div className="overflow-auto max-h-56">
               <table className="w-full text-sm text-left">
                 <thead>
                   <tr className="bg-[#e9d9b7] text-black">
-                    <th className="py-2 px-3">Number</th>
-                    <th className="py-2 px-3">Date</th>
-                    <th className="py-2 px-3">Customer</th>
+                    <th className="py-2 px-3">
+                      <span className="flex items-center gap-2">
+                        Number <FaSort />
+                      </span>
+                    </th>
+                    <th className="py-2 px-3">
+                      <span className="flex items-center gap-2">
+                        Date <FaSort />
+                      </span>
+                    </th>
+                    <th className="py-2 px-3">
+                      <span className="flex items-center gap-2">
+                        Customer <FaSort />
+                      </span>
+                    </th>
                   </tr>
                 </thead>
                 <tbody>

@@ -8,7 +8,7 @@ const page = () => {
       <div className="">
         <ul className={`space-y-11 ${styles.listStyle}`}>
           <li>
-            <Link href="">
+            <Link href="notifications">
               Notification <MdArrowForwardIos />
             </Link>
           </li>

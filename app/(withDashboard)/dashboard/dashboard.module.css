@@ -57,6 +57,14 @@
     gap: 0.375rem;
 }
 
+.sublist:hover {
+    background-color: white !important;
+}
+
+.sublist:focus {
+    background-color: white !important;
+}
+
 /* venodr profile section  */
 
 .vendorTable th span {
