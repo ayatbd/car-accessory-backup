@@ -1,8 +1,9 @@
-import styles from "./auth.module.css";
+import Link from "next/link";
+import styles from "./../auth.module.css";
 const AdminLogin = () => {
   return (
     <div
-      className={`min-h-screen bg-white flex flex-col justify-center py-12 sm:px-6 lg:px-8 ${styles.loginMain}`}
+      className={`min-h-screen bg-white flex flex-col justify-center py-12 sm:px-6 lg:px-8 ${styles.customStyle1}`}
     >
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white py-8 px-4 shadow-lg sm:rounded-lg sm:px-10">
@@ -107,12 +108,12 @@ const AdminLogin = () => {
                 </label>
               </div>
 
-              <a
-                href="#"
+              <Link
+                href="/adminpassreset"
                 className="text-[24px] text-[#8C7B5C] hover:text-[#776a52]"
               >
                 Forgot password?
-              </a>
+              </Link>
             </div>
 
             {/* Submit Button */}
@@ -120,7 +121,7 @@ const AdminLogin = () => {
               type="submit"
               className="w-full flex justify-center py-2 px-4 sm:py-3 border border-transparent rounded-lg shadow-sm text-[20px]  font-bold text-[#181818] bg-[#FFE0A7] hover:bg-[#e9cc96]focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#e9cc96]"
             >
-              <span>Sign In</span>
+              Sign In
             </button>
           </form>
         </div>

@@ -1,6 +1,6 @@
-.loginMain {
+.customStyle1 {
     background-image: linear-gradient(rgba(34, 34, 34, 0.61), rgba(34, 34, 34, 0.61)),
-        url(../../../public/pictures/pawning.png);
+        url(../../public/pictures/pawning.png);
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 50% 100%;
