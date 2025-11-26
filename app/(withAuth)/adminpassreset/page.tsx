@@ -8,7 +8,9 @@ const AdminPasswordReset = () => {
         <div className="bg-white py-8 px-4 shadow-lg sm:rounded-lg sm:px-10">
           {/* Header */}
           <div className="text-start mb-8">
-            <h2 className="text-[32px] font-medium text-[#0A0A0A]">Email</h2>
+            <h2 className="text-[32px] font-medium text-primary-black">
+              Email
+            </h2>
             <p className="mt-2 text-[20px] text-[#3E3E3E]">
               Enter your email address to get a verification code for resetting
               your password.
@@ -38,7 +40,7 @@ const AdminPasswordReset = () => {
               type="submit"
               className="w-full flex justify-center py-2 px-4 sm:py-3 border border-transparent rounded-lg shadow-sm text-[20px]  font-bold text-[#181818] bg-[#FFE0A7] hover:bg-[#e9cc96]focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#e9cc96]"
             >
-              <span>Sign In</span>
+              <span>Get OTP</span>
             </button>
           </form>
         </div>

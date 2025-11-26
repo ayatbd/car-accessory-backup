@@ -27,7 +27,10 @@ export default function DashboardLayout({
                 <ProfileNotification />
                 <div className="w-9 h-9 rounded-lg bg-[#ffff] flex items-center justify-center">
                   <Link href="dashboard/profile">
-                    <UserRound color="#0A0A0A" className=" cursor-pointer" />
+                    <UserRound
+                      color="primary-black"
+                      className=" cursor-pointer"
+                    />
                   </Link>
                 </div>
               </div>

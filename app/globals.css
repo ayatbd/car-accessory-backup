@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+@theme {
+    --color-primary-black: #0A0A0A;
+}
+
 .custom-swal-popup {
     padding: 160px 200px !important;
     /* top-bottom | left-right */

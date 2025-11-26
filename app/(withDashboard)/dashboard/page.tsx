@@ -61,7 +61,7 @@ export default function Dashboard() {
             ].map((c, idx) => (
               <div
                 key={idx}
-                className="bg-[#0A0A0A] py-[21px] px-[41px] rounded border "
+                className="bg-[primary-black] py-[21px] px-[41px] rounded border "
               >
                 <div className="flex items-center justify-between">
                   <div>
@@ -77,7 +77,7 @@ export default function Dashboard() {
           </div>
 
           {/* Charts row */}
-          <div className="col-span-12 lg:col-span-6 rounded border p-4 bg-[#0A0A0A]">
+          <div className="col-span-12 lg:col-span-6 rounded border p-4 bg-[primary-black]">
             <div className="text-sm text-gray-300 mb-2">Income Statistics</div>
             <div style={{ height: 240 }}>
               <ResponsiveContainer width="100%" height="100%">
@@ -105,7 +105,7 @@ export default function Dashboard() {
             </div>
           </div>
 
-          <div className="col-span-12 lg:col-span-6 rounded border p-4 bg-[#0A0A0A]">
+          <div className="col-span-12 lg:col-span-6 rounded border p-4 bg-[primary-black]">
             <div className="text-sm text-gray-300 mb-2">
               Number of Subscription Users
             </div>
@@ -123,7 +123,7 @@ export default function Dashboard() {
           </div>
 
           {/* Lower tables */}
-          <div className="col-span-12 text-white lg:col-span-6 rounded border-sm bg-[#0A0A0A] p-3">
+          <div className="col-span-12 text-white lg:col-span-6 rounded border-sm bg-[primary-black] p-3">
             <div className="text-[20px] text-gray-300 mb-2">
               Vendor Accounts
             </div>
@@ -156,7 +156,7 @@ export default function Dashboard() {
             </div>
           </div>
 
-          <div className="col-span-12 text-white lg:col-span-6 rounded border bg-[#0A0A0A] p-3">
+          <div className="col-span-12 text-white lg:col-span-6 rounded border bg-[primary-black] p-3">
             <div className="text-[20px] text-gray-300 mb-2">User Activity</div>
             <div className="overflow-auto max-h-56">
               <table className="w-full text-sm text-left">

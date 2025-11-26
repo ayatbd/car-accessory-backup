@@ -12,7 +12,7 @@ export default function CustomerPage() {
       {/* Statistic Cards */}
       <div className="flex items-center gap-7 mb-8 w-1/2">
         {/* Vendors */}
-        <div className="card bg-[#0A0A0A] shadow-xl flex-1">
+        <div className="card bg-[primary-black] shadow-xl flex-1">
           <div className="card-body py-6 px-4 flex flex-row justify-between items-center">
             <div>
               <p className="text-[16px]">Vendors</p>
@@ -27,7 +27,7 @@ export default function CustomerPage() {
         </div>
 
         {/* Customers */}
-        <div className="card bg-[#0A0A0A] shadow-xl flex-1">
+        <div className="card bg-[primary-black] shadow-xl flex-1">
           <div className="card-body py-6 px-4 flex flex-row justify-between items-center">
             <div>
               <p className="text-[16px]">Customers</p>

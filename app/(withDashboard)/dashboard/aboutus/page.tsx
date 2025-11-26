@@ -6,7 +6,7 @@ const AboutUs = () => {
     <div className="bg-[#fff5e4] min-h-screen  pt-[72px] pl-[134px]">
       <div className="max-w-[1040px] space-y-[98px]">
         <div className="bg-[#FFE6B9] py-20 px-10 space-y-[60px]">
-          <h1 className="text-[24px] text-[#222222] pb-3 border-b border-[#0A0A0A]">
+          <h1 className="text-[24px] text-[#222222] pb-3 border-b border-[primary-black]">
             About US
           </h1>
           <div className="space-y-11">
