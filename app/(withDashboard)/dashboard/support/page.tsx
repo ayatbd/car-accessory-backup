@@ -1,12 +1,20 @@
+"use client";
 import { Button } from "antd";
 import Link from "next/link";
+import { useContext, useEffect } from "react";
+import { PageTitleContext } from "../layout";
 
-const ChangePassword = () => {
+const Support = () => {
+  const { setTitle } = useContext(PageTitleContext);
+
+  useEffect(() => {
+    setTitle("Support");
+  }, [setTitle]);
   return (
     <div className="bg-[#fff5e4] min-h-screen  pt-[72px] pl-[134px]">
       <div className="max-w-[1040px] space-y-[98px]">
         <div className="bg-[#FFE6B9] py-20 px-10 space-y-[60px]">
-          <h1 className="text-[24px] text-[#222222] pb-3 border-b border-[primary-black]">
+          <h1 className="text-[24px] text-[#222222] pb-3 border-b border-primary-black">
             Support
           </h1>
           <div className="space-y-11">
@@ -54,4 +62,4 @@ const ChangePassword = () => {
   );
 };
 
-export default ChangePassword;
+export default Support;

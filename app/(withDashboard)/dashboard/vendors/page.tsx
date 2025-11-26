@@ -13,7 +13,7 @@ const UserManagementContent: React.FC = () => {
       {/* Statistic Cards */}
       <div className="flex items-center gap-7 mb-8 w-1/2">
         {/* Vendors */}
-        <div className="card bg-[primary-black] w-64 shadow-xl flex-1">
+        <div className="card bg-primary-black w-64 shadow-xl flex-1">
           <div className="card-body py-6 px-4 flex flex-row justify-between items-center">
             <div>
               <p className="text-[16px]">Vendors</p>
@@ -28,7 +28,7 @@ const UserManagementContent: React.FC = () => {
         </div>
 
         {/* Customers */}
-        <div className="card bg-[primary-black] w-64 shadow-xl flex-1">
+        <div className="card bg-primary-black w-64 shadow-xl flex-1">
           <div className="card-body py-6 px-4 flex flex-row justify-between items-center">
             <div>
               <p className="text-[16px]">Customers</p>
@@ -165,7 +165,7 @@ const UserManagementContent: React.FC = () => {
                               </div>
                             </div>
                           </div>
-                          <div className="space-y-3.5">
+                          <div className={`space-y-3.5 ${styles.vendorModal}`}>
                             <h1 className="text-[24px] text-[#F66E10] font-semibold">
                               Information
                             </h1>

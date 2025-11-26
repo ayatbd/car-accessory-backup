@@ -42,7 +42,7 @@ const SideBar = () => {
   };
 
   return (
-    <aside className="md:min-w-[17.5%] bg-[#f5dca7] text-[#0f0f0f] p-6">
+    <aside className="md:min-w-[16%] bg-[#f5dca7] text-[#0f0f0f] p-6">
       <div className="mb-8">
         <Image
           className="mx-auto"

@@ -2,6 +2,7 @@
 import { Eye, Wallet } from "lucide-react";
 import Image from "next/image";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
+import styles from "../dashboard.module.css";
 
 const Income = () => {
   return (
@@ -124,12 +125,24 @@ const Income = () => {
                               </h1>
                             </div>
                             <div className="space-y-10 min-w-[730px]">
-                              <ul className="space-y-3">
-                                <li>Employee ID: #1234</li>
-                                <li>Email: wade@gmail.com</li>
-                                <li>Time & Date: 4:15 PM, 13/02/24</li>
-                                <li>Amount: $3.50</li>
-                                <li>Payment Method: Debit Card</li>
+                              <ul className={`space-y-3 ${styles.incomeModal}`}>
+                                <li>
+                                  <span>Employee ID:</span> #1234
+                                </li>
+                                <li>
+                                  <span>Email:</span> wade@gmail.com
+                                </li>
+                                <li>
+                                  <span>Time & Date:</span> 4:15 PM, 13/02/24
+                                </li>
+                                <li>
+                                  <span>Amount:</span>
+                                  $3.50
+                                </li>
+                                <li>
+                                  <span>Payment Method:</span>
+                                  Debit Card
+                                </li>
                               </ul>
                             </div>
                           </div>

@@ -9,7 +9,7 @@ const AdminLogin = () => {
         <div className="bg-white py-8 px-4 shadow-lg sm:rounded-lg sm:px-10">
           {/* Header */}
           <div className="text-start mb-8">
-            <h2 className="text-[32px] font-medium text-[primary-black]">
+            <h2 className="text-[32px] font-medium text-primary-black">
               Set New Password
             </h2>
             <p className="mt-2 text-[20px] text-[#3E3E3E]">

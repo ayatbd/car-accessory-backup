@@ -21,7 +21,7 @@ const Profile = () => {
         <span className="text-[40px] text-[#222222]">{value.name}</span>
       </div>
       <div className="w-[1040px] space-y-[300px]">
-        <form className="mt-[60px] space-y-8">
+        <form className="mt-[45px] space-y-8">
           <div>
             <label
               className="block text-[18px] text-[#222222] mb-2"

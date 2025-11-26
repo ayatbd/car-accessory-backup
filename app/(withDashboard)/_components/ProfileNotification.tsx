@@ -1,6 +1,7 @@
 import { Button } from "antd";
 import { BellDot, BellRing } from "lucide-react";
 import Link from "next/link";
+import { FaBell } from "react-icons/fa";
 
 type Notification = {
   id: string | number;
@@ -52,7 +53,7 @@ const ProfileNotification = () => {
       {/* <UserRound className="text-black cursor-pointer" /> */}
       <div className="dropdown dropdown-bottom dropdown-end">
         <div tabIndex={0} className="m-1">
-          <BellRing fill="gray" className="cursor-pointer text-[#545454]" />
+          <FaBell fill="gray" size={20} className="cursor-pointer" />
         </div>
         <ul className="dropdown-content menu bg-base-100 rounded-sm z-1 w-[506px] p-10 shadow-sm">
           {notifications.map((notification, id) => (

@@ -74,6 +74,12 @@
     /* Adjust the gap as needed */
 }
 
+.vendorModal p {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 /* settings section styles  */
 
 .listStyle li a {
@@ -83,5 +89,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 20px
+    padding: 2px 4px;
+}
+
+.listStyle li {
+    transition: all;
+    transition-duration: 0.3s;
+
+}
+
+.listStyle li:hover {
+    color: #222222;
+    background-color: rgb(131, 128, 128);
+}
+
+/* income section styles  */
+
+.incomeModal li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }

@@ -6,9 +6,9 @@ import {
   YAxis,
   Tooltip,
   ResponsiveContainer,
-  BarChart,
   Bar,
   CartesianGrid,
+  BarChart,
 } from "recharts";
 import { Users, Headset, UserRound } from "lucide-react";
 import { FaSort } from "react-icons/fa";
@@ -19,19 +19,29 @@ import { FaSort } from "react-icons/fa";
 
 // Sample data to power the sample charts and tables. Replace with real API data as needed.
 const lineData = [
-  { name: "Jan", a: 30, b: 50 },
-  { name: "Feb", a: 45, b: 60 },
-  { name: "Mar", a: 60, b: 80 },
-  { name: "Apr", a: 40, b: 55 },
-  { name: "May", a: 50, b: 65 },
-  { name: "Jun", a: 35, b: 45 },
-  { name: "Jul", a: 35, b: 45 },
+  { name: "Jan", monthly: 25, yearly: 45 },
+  { name: "Feb", monthly: 45, yearly: 60 },
+  { name: "Mar", monthly: 55, yearly: 75 },
+  { name: "Apr", monthly: 32, yearly: 50 },
+  { name: "May", monthly: 35, yearly: 42 },
+  { name: "Jun", monthly: 52, yearly: 42 },
+  { name: "Jul", monthly: 10, yearly: 30 },
 ];
 
-const barData = Array.from({ length: 7 }).map((_, i) => ({
-  name: `W${i + 1}`,
-  value: Math.round(200 + Math.random() * 400),
-}));
+const barData = [
+  { name: "Jan", monthly: 300, yearly: 450 },
+  { name: "Feb", monthly: 420, yearly: 520 },
+  { name: "Mar", monthly: 380, yearly: 610 },
+  { name: "Apr", monthly: 260, yearly: 580 },
+  { name: "May", monthly: 300, yearly: 540 },
+  { name: "Jun", monthly: 350, yearly: 480 },
+  { name: "Jul", monthly: 430, yearly: 510 },
+  { name: "Aug", monthly: 410, yearly: 620 },
+  { name: "Sep", monthly: 410, yearly: 620 },
+  { name: "Oct", monthly: 410, yearly: 620 },
+  { name: "Nov", monthly: 410, yearly: 620 },
+  { name: "Dec", monthly: 410, yearly: 620 },
+];
 
 export default function Dashboard() {
   return (
@@ -61,7 +71,7 @@ export default function Dashboard() {
             ].map((c, idx) => (
               <div
                 key={idx}
-                className="bg-[primary-black] py-[21px] px-[41px] rounded border "
+                className="bg-primary-black py-[21px] px-[41px] rounded border "
               >
                 <div className="flex items-center justify-between">
                   <div>
@@ -77,53 +87,139 @@ export default function Dashboard() {
           </div>
 
           {/* Charts row */}
-          <div className="col-span-12 lg:col-span-6 rounded border p-4 bg-[primary-black]">
-            <div className="text-sm text-gray-300 mb-2">Income Statistics</div>
-            <div style={{ height: 240 }}>
-              <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={lineData}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#1f1f1f" />
-                  <XAxis dataKey="name" stroke="#555" />
-                  <YAxis stroke="#555" />
-                  <Tooltip />
-                  <Line
-                    type="monotone"
-                    dataKey="a"
-                    stroke="#f3d29b"
-                    strokeWidth={3}
-                    dot={false}
-                  />
-                  <Line
-                    type="monotone"
-                    dataKey="b"
-                    stroke="#ffffff"
-                    strokeWidth={3}
-                    dot={false}
-                  />
-                </LineChart>
-              </ResponsiveContainer>
+          <div className="col-span-12 lg:col-span-6 rounded border p-4 bg-primary-black">
+            <div className="text-[20px] text-[#FFFFFF] mb-2">
+              Income Statistics
             </div>
+            <div className="flex justify-end mb-3 text-xs space-x-4">
+              <div className="flex items-center space-x-1">
+                <span
+                  className="w-2 h-2 rounded-full"
+                  style={{ backgroundColor: "#f5e6a2" }}
+                ></span>
+                <span className="text-[#f5e6a2]">Monthly</span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <span
+                  className="w-2 h-2 rounded-full"
+                  style={{ backgroundColor: "#ffffff" }}
+                ></span>
+                <span className="text-white">Yearly</span>
+              </div>
+            </div>
+
+            <ResponsiveContainer width="100%" height={300}>
+              <LineChart data={lineData}>
+                <CartesianGrid
+                  stroke="#444"
+                  strokeDasharray="0"
+                  horizontal={true}
+                  vertical={false}
+                />
+                <XAxis
+                  dataKey="name"
+                  stroke="#999"
+                  tick={{ fill: "#ccc", fontSize: 12 }}
+                />
+                <YAxis
+                  stroke="#999"
+                  tick={{ fill: "#ccc", fontSize: 12 }}
+                  domain={[20, 80]}
+                  ticks={[20, 30, 40, 50, 60, 70, 80]}
+                />
+                <Tooltip
+                  contentStyle={{
+                    backgroundColor: "#222",
+                    borderRadius: "8px",
+                    border: "none",
+                  }}
+                />
+
+                {/* Yearly (Yellow) */}
+                <Line
+                  type="monotone"
+                  dataKey="yearly"
+                  stroke="#f5e6a2"
+                  strokeWidth={3}
+                  dot={false}
+                />
+
+                {/* Monthly (White) */}
+                <Line
+                  type="monotone"
+                  dataKey="monthly"
+                  stroke="#ffffff"
+                  strokeWidth={3}
+                  dot={false}
+                />
+              </LineChart>
+            </ResponsiveContainer>
           </div>
 
-          <div className="col-span-12 lg:col-span-6 rounded border p-4 bg-[primary-black]">
+          <div className="col-span-12 lg:col-span-6 rounded border p-4 bg-primary-black">
             <div className="text-sm text-gray-300 mb-2">
               Number of Subscription Users
             </div>
-            <div style={{ height: 240 }}>
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={barData}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#1f1f1f" />
-                  <XAxis dataKey="name" stroke="#555" />
-                  <YAxis stroke="#555" />
-                  <Tooltip />
-                  <Bar dataKey="value" barSize={12} />
-                </BarChart>
-              </ResponsiveContainer>
+            <div className="flex justify-end mb-3 text-xs space-x-4">
+              <div className="flex items-center space-x-1">
+                <span
+                  className="w-2 h-2 rounded-full"
+                  style={{ backgroundColor: "#ffffff" }}
+                ></span>
+                <span>Monthly</span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <span
+                  className="w-2 h-2 rounded-full"
+                  style={{ backgroundColor: "#f5e6a2" }}
+                ></span>
+                <span>Yearly</span>
+              </div>
             </div>
+
+            <ResponsiveContainer width="100%" height={300}>
+              <BarChart data={barData}>
+                <CartesianGrid stroke="#444" vertical={false} />
+                <XAxis
+                  dataKey="name"
+                  stroke="#999"
+                  tick={{ fill: "#ccc", fontSize: 12 }}
+                />
+                <YAxis
+                  stroke="#999"
+                  tick={{ fill: "#ccc", fontSize: 12 }}
+                  domain={[0, 800]}
+                  ticks={[0, 200, 400, 600, 800]}
+                />
+                <Tooltip
+                  contentStyle={{
+                    backgroundColor: "#222",
+                    borderRadius: "8px",
+                    border: "none",
+                  }}
+                />
+
+                {/* Monthly (White) */}
+                <Bar
+                  dataKey="monthly"
+                  fill="#ffffff"
+                  barSize={10}
+                  radius={[6, 6, 0, 0]}
+                />
+
+                {/* Yearly (Yellow) */}
+                <Bar
+                  dataKey="yearly"
+                  fill="#f5e6a2"
+                  barSize={10}
+                  radius={[6, 6, 0, 0]}
+                />
+              </BarChart>
+            </ResponsiveContainer>
           </div>
 
           {/* Lower tables */}
-          <div className="col-span-12 text-white lg:col-span-6 rounded border-sm bg-[primary-black] p-3">
+          <div className="col-span-12 text-white lg:col-span-6 rounded border-sm bg-primary-black p-3">
             <div className="text-[20px] text-gray-300 mb-2">
               Vendor Accounts
             </div>
@@ -156,7 +252,7 @@ export default function Dashboard() {
             </div>
           </div>
 
-          <div className="col-span-12 text-white lg:col-span-6 rounded border bg-[primary-black] p-3">
+          <div className="col-span-12 text-white lg:col-span-6 rounded border bg-primary-black p-3">
             <div className="text-[20px] text-gray-300 mb-2">User Activity</div>
             <div className="overflow-auto max-h-56">
               <table className="w-full text-sm text-left">
