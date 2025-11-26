@@ -8,12 +8,13 @@ const VerifyOTP = () => {
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white py-8 px-4 shadow-lg sm:rounded-lg sm:px-10">
           {/* Header */}
-          <div className="text-start mb-8 ml-14">
+          <div className="text-start mb-8">
             <h2 className="text-[32px] font-medium text-[primary-black]">
-              Welcome
+              Verify OTP
             </h2>
             <p className="mt-2 text-[20px] text-[#3E3E3E]">
-              Please sign in for better experience
+              We have sent you an OTP to your email address. Please check it and
+              place the OTP for resetting password
             </p>
           </div>
 
