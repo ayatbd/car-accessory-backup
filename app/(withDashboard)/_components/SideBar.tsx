@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import styles from "./../dashboard/dashboard.module.css";
 
@@ -17,9 +16,30 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { IoIosPeople } from "react-icons/io";
+import Swal from "sweetalert2";
 
 const SideBar = () => {
   const [openUsers, setOpenUsers] = useState(false);
+
+  const handleLogout = () => {
+    console.log("clicked done");
+    Swal.fire({
+      title: "Are you sure?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Confirm Logout",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Deleted!",
+          text: "Your file has been deleted.",
+          icon: "success",
+        });
+      }
+    });
+  };
 
   return (
     <aside className="md:min-w-[17.5%] bg-[#f5dca7] text-[#0f0f0f] p-6">
@@ -116,13 +136,11 @@ const SideBar = () => {
           </li>
           <li>
             {/* Logout */}
-            <Link href="/dashboard/logout">
-              <button>
-                <span className="flex items-center gap-2">
-                  <LogOut /> Logout
-                </span>
-              </button>
-            </Link>
+            <button onClick={handleLogout}>
+              <span className="flex items-center gap-2">
+                <LogOut /> Logout
+              </span>
+            </button>
           </li>
         </ul>
       </nav>
