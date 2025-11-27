@@ -13,7 +13,7 @@ const VerifyOTP = () => {
               Verify OTP
             </h2>
             <p className="mt-2 text-[20px] text-[#3E3E3E]">
-              We have sent you an OTP to your email address. Please check it and
+              We have sent you an OTP to your email address.Please check it and
               place the OTP for resetting password
             </p>
           </div>

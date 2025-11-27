@@ -28,6 +28,7 @@ const UpdatePassword = () => {
                 id="currentPassword"
                 type="password"
                 placeholder="Enter your password"
+                required
               />
             </div>
             <div>
@@ -42,6 +43,7 @@ const UpdatePassword = () => {
                 id="currentPassword"
                 type="password"
                 placeholder="Enter your password"
+                required
               />
             </div>
           </div>

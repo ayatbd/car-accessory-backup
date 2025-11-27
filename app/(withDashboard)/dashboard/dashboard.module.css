@@ -40,6 +40,10 @@
     cursor: pointer;
 }
 
+.sidebar ul li {
+    margin: 15px 0;
+}
+
 .sidebar button:hover {
     background-color: #3E3E3E;
 }

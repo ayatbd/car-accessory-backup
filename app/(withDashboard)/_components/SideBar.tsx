@@ -43,7 +43,7 @@ const SideBar = () => {
 
   return (
     <aside className="md:min-w-[16%] bg-[#f5dca7] text-[#0f0f0f] p-6">
-      <div className="mb-8">
+      <div className="">
         <Image
           className="mx-auto"
           width={135}

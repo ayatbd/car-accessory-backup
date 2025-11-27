@@ -1,5 +1,5 @@
 "use client";
-import { createContext, useState, useContext, useEffect, useMemo } from "react";
+import { createContext, useState, useEffect, useMemo } from "react";
 import SideBar from "../_components/SideBar";
 import ProfileNotification from "../_components/ProfileNotification";
 import Link from "next/link";
@@ -43,6 +43,9 @@ export default function DashboardLayout({
     []
   );
 
+  const isDashboard = pathname === "/dashboard";
+  const navbarColor = isDashboard ? "bg-[#181818]" : "bg-[#6B5E46]";
+
   useEffect(() => {
     // If there's an exact mapping use it; otherwise derive from last segment
     if (!pathname) return;
@@ -71,7 +74,7 @@ export default function DashboardLayout({
         <div className="min-w-[84%]">
           <main className="flex-1">
             {/* Top header */}
-            <div className="px-[134px] bg-[#0f0f0f]">
+            <div className={`px-[134px] ${navbarColor}`}>
               <header className="flex items-center justify-between py-7">
                 <span>
                   <DashboardHeader></DashboardHeader>

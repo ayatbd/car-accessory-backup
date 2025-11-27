@@ -16,18 +16,59 @@ const VerifyOTP = () => {
             </p>
           </div>
           <div className="space-y-5 mb-[52px]">
-            <div>
-              <label
-                className="block text-[18px] text-[#222222] mb-2"
-                htmlFor="currentPassword"
-              >
-                Email
-              </label>
+            <div className="flex justify-center space-x-4 mb-6">
               <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-[#3E3E3E]"
-                id="email"
-                type="email"
-                placeholder="Enter your email"
+                type="text"
+                maxLength={1}
+                className="w-12 h-16 text-center text-2xl border-2 border-[#FFE0A7] rounded-xl
+              focus:outline-none focus:ring-2 focus:ring-[#FFE0A7]
+              dark:bg-gray-600 dark:text-white dark:border-blue-400
+              transition-transform duration-300 hover:scale-110"
+              />
+
+              <input
+                type="text"
+                maxLength={1}
+                className="w-12 h-16 text-center text-2xl border-2 border-[#FFE0A7] rounded-xl
+              focus:outline-none focus:ring-2 focus:ring-[#FFE0A7]
+              dark:bg-gray-600 dark:text-white dark:border-blue-400
+              transition-transform duration-300 hover:scale-110"
+              />
+
+              <input
+                type="text"
+                maxLength={1}
+                className="w-12 h-16 text-center text-2xl border-2 border-[#FFE0A7] rounded-xl
+              focus:outline-none focus:ring-2 focus:ring-[#FFE0A7]
+              dark:bg-gray-600 dark:text-white dark:border-blue-400
+              transition-transform duration-300 hover:scale-110"
+              />
+
+              <input
+                type="text"
+                maxLength={1}
+                className="w-12 h-16 text-center text-2xl border-2 border-[#FFE0A7] rounded-xl
+              focus:outline-none focus:ring-2 focus:ring-[#FFE0A7]
+              dark:bg-gray-600 dark:text-white dark:border-blue-400
+              transition-transform duration-300 hover:scale-110"
+              />
+
+              <input
+                type="text"
+                maxLength={1}
+                className="w-12 h-16 text-center text-2xl border-2 border-[#FFE0A7] rounded-xl
+              focus:outline-none focus:ring-2 focus:ring-[#FFE0A7]
+              dark:bg-gray-600 dark:text-white dark:border-blue-400
+              transition-transform duration-300 hover:scale-110"
+              />
+
+              <input
+                type="text"
+                maxLength={1}
+                className="w-12 h-16 text-center text-2xl border-2 border-[#FFE0A7] rounded-xl
+              focus:outline-none focus:ring-2 focus:ring-[#FFE0A7]
+              dark:bg-gray-600 dark:text-white dark:border-blue-400
+              transition-transform duration-300 hover:scale-110"
               />
             </div>
           </div>
