@@ -30,3 +30,26 @@
     border-radius: 8px !important;
     border: none !important;
 }
+
+/* Swiper Pagination Dots */
+.swiper-pagination-bullet {
+    background: #ffffff;
+    opacity: 0.3;
+    width: 12px;
+    height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #ffffff;
+}
+
+/* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
