@@ -33,14 +33,17 @@ export default function Header() {
               </li>
               <li>
                 <Link
-                  href="/products"
+                  href="/allproducts"
                   className="hover:text-[#e8d39f] transition"
                 >
                   All Products & Service
                 </Link>
               </li>
               <li>
-                <Link href="/shop" className="hover:text-[#e8d39f] transition">
+                <Link
+                  href="/allproducts"
+                  className="hover:text-[#e8d39f] transition"
+                >
                   Shop
                 </Link>
               </li>

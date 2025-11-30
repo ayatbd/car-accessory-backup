@@ -93,7 +93,7 @@ export default function ProductAndServices() {
                       {item.title}
                     </h3>
 
-                    <button className="mt-3 px-[60px] bg-[#F3D29C] text-black py-2.5 rounded-sm text-sm">
+                    <button className="mt-3 cursor-pointer px-[60px] bg-[#F3D29C] text-black py-2.5 rounded-sm text-sm">
                       Visit
                     </button>
                   </div>
