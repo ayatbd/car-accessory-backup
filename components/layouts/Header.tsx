@@ -1,7 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import Container from "../shared/Container";
+import { MdSearch } from "react-icons/md";
+import { IoMdNotifications } from "react-icons/io";
+import { FaRegUser } from "react-icons/fa";
+import { RiArrowDropDownLine } from "react-icons/ri";
 export default function Header() {
+  const user = true;
   return (
     <div className="bg-[#222222]">
       <Container>
@@ -58,27 +63,42 @@ export default function Header() {
             </ul>
 
             {/* RIGHT — Buttons */}
-            <div className="flex items-center gap-4">
-              {/* Sign In button (outlined) */}
-              <Link href="/signin">
-                <button className="cursor-pointer px-6 py-2 rounded-md border border-[#e8d39f] text-white hover:bg-[#e8d39f] hover:text-black transition">
-                  Sign In
-                </button>
-              </Link>
+            {!user ? (
+              <div className="flex items-center gap-4">
+                {/* Sign In button (outlined) */}
+                <Link href="/signin">
+                  <button className="cursor-pointer px-6 py-2 rounded-md border border-[#e8d39f] text-white hover:bg-[#e8d39f] hover:text-black transition">
+                    Sign In
+                  </button>
+                </Link>
 
-              {/* Sign Up button (filled) */}
-              <Link href="/signup">
-                <button className="cursor-pointer px-6 py-2 rounded-md bg-[#e8d39f] text-black hover:bg-[#d7c089] transition">
-                  Sign Up
-                </button>
-              </Link>
-            </div>
-            <div>
-              <div>
-                <span></span>
-                <span></span>
+                {/* Sign Up button (filled) */}
+                <Link href="/signup">
+                  <button className="cursor-pointer px-6 py-2 rounded-md bg-[#e8d39f] text-black hover:bg-[#d7c089] transition">
+                    Sign Up
+                  </button>
+                </Link>
               </div>
-            </div>
+            ) : (
+              <div className="flex items-center justify-between gap-[170px]">
+                <div className="flex items-center gap-5">
+                  <span className="rounded-full border border-white p-1.5">
+                    <MdSearch size={20} className="text-white" />
+                  </span>
+                  <span className="rounded-full border border-white p-1.5">
+                    <IoMdNotifications size={20} className="text-white" />
+                  </span>
+                </div>
+                <div className="flex items-center gap-px">
+                  <span className="rounded-full bg-white p-1.5">
+                    <FaRegUser size={20} className="text-black" />
+                  </span>
+                  <span>
+                    <RiArrowDropDownLine size={20} />
+                  </span>
+                </div>
+              </div>
+            )}
           </div>
         </nav>
       </Container>
