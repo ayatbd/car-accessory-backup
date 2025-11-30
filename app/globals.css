@@ -32,11 +32,19 @@
 }
 
 /* Swiper Pagination Dots */
+.swiper {
+    margin: 0 90px !important;
+}
+
+.swiper-navigation-icon {
+    height: 30px !important;
+}
+
 .swiper-pagination-bullet {
-    background: #ffffff;
+    background: #ffffff !important;
     opacity: 0.3;
-    width: 12px;
-    height: 12px;
+    width: 16px !important;
+    height: 16px !important;
 }
 
 .swiper-pagination-bullet-active {
