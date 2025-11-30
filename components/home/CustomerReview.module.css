@@ -1,0 +1,21 @@
+.paginationBullet {
+    background: #ffffff !important;
+    opacity: 0.3;
+    width: 16px !important;
+    height: 16px !important;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #ffffff;
+}
+
+/* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

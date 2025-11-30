@@ -6,9 +6,9 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <div className="bg-[#222222]">
+    <div className="bg-[#222222] py-[150px]">
       <Container>
-        <footer className="w-full border-t border-[#e8d39f]/40 text-white py-20">
+        <div className="w-full border-t border-[#e8d39f]/40 text-white py-20">
           {/* Top border */}
           {/* <div className="h-px bg-[#e8d39f]/40 mb-16" /> */}
 
@@ -87,7 +87,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-        </footer>
+        </div>
       </Container>
     </div>
   );

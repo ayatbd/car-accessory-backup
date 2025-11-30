@@ -6,7 +6,7 @@ export default function AboutUs() {
   return (
     <section>
       <Container>
-        <div className="w-full text-white py-20 px-6 space-y-20">
+        <div className="w-full text-white py-20 px-6">
           {/* Title */}
           <div className="flex justify-between items-center w-full gap-14">
             {/* <h2 className="text-3xl font-medium mb-4">ABOUT US</h2> */}
@@ -39,7 +39,7 @@ export default function AboutUs() {
               className="w-full h-auto rounded-lg"
             />
           </div>
-          <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
+          <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 mt-20">
             {/* <!-- Box 1 --> */}
             <div>
               <h3 className="text-[24px] font-medium text-[#EAC88C] mb-4">
