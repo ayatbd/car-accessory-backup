@@ -2,6 +2,7 @@
 
 import Container from "@/components/shared/Container";
 import Image from "next/image";
+import Link from "next/link";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
 export default function AllProductsPage() {
@@ -125,10 +126,11 @@ export default function AllProductsPage() {
                     <h3 className="text-white text-[24px] font-medium text-center">
                       {p.title}
                     </h3>
-
-                    <button className="mt-3 cursor-pointer px-[60px] bg-[#F3D29C] text-black py-2.5 rounded-sm text-sm">
-                      Visit
-                    </button>
+                    <Link href="allproducts/${p.id}" key={p.id}>
+                      <button className="mt-3 cursor-pointer px-[60px] bg-[#F3D29C] text-black py-2.5 rounded-sm text-sm">
+                        Visit
+                      </button>
+                    </Link>
                   </div>
                 </div>
               ))}
