@@ -1,5 +1,5 @@
 import { Button } from "antd";
-import { BellDot, BellRing } from "lucide-react";
+import { BellDot } from "lucide-react";
 import Link from "next/link";
 import { FaBell } from "react-icons/fa";
 
@@ -49,43 +49,37 @@ const notifications: Notification[] = [
 
 const ProfileNotification = () => {
   return (
-    <div className="w-9 h-9 rounded-lg bg-[#ffff] flex items-center justify-center">
-      {/* <UserRound className="text-black cursor-pointer" /> */}
-      <div className="dropdown dropdown-bottom dropdown-end">
-        <div tabIndex={0} className="m-1">
-          <FaBell fill="gray" size={20} className="cursor-pointer" />
+    <>
+      <ul className="dropdown-content menu bg-base-100 rounded-sm z-50 w-[506px] p-10 shadow-sm">
+        {notifications.map((notification, id) => (
+          <li key={id} className="flex gap-3 border-b pb-4">
+            <span>
+              <BellDot className="w-6 h-6 text-[#8C7B5C]" />
+              <a className="text-18px text-[#8C7B5C] flex flex-col justify-center items-start ml-1">
+                {notification.message}
+                <span className="text-[#8C8C8C]">{notification.time}</span>
+              </a>
+            </span>
+          </li>
+        ))}
+        <div className="text-center mt-9">
+          <Link href="/dashboard/notifications">
+            <Button
+              style={{
+                backgroundColor: "#222222",
+                borderRadius: "5px",
+                color: "#FFE0A7",
+                fontSize: "18px",
+                padding: "20px 40px",
+              }}
+              type="primary"
+            >
+              View More
+            </Button>
+          </Link>
         </div>
-        <ul className="dropdown-content menu bg-base-100 rounded-sm z-1 w-[506px] p-10 shadow-sm">
-          {notifications.map((notification, id) => (
-            <li key={id} className="flex gap-3 border-b pb-4">
-              <span>
-                <BellDot className="w-6 h-6 text-[#8C7B5C]" />
-                <a className="text-18px text-[#8C7B5C] flex flex-col justify-center items-start ml-1">
-                  {notification.message}
-                  <span className="text-[#8C8C8C]">{notification.time}</span>
-                </a>
-              </span>
-            </li>
-          ))}
-          <div className="text-center mt-9">
-            <Link href="/dashboard/notifications">
-              <Button
-                style={{
-                  backgroundColor: "#222222",
-                  borderRadius: "5px",
-                  color: "#FFE0A7",
-                  fontSize: "18px",
-                  padding: "20px 40px",
-                }}
-                type="primary"
-              >
-                View More
-              </Button>
-            </Link>
-          </div>
-        </ul>
-      </div>
-    </div>
+      </ul>
+    </>
   );
 };
 

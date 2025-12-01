@@ -5,6 +5,7 @@ import { MdSearch } from "react-icons/md";
 import { IoMdNotifications } from "react-icons/io";
 import { FaRegUser } from "react-icons/fa";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import ProfileNotification from "@/app/(withDashboard)/_components/ProfileNotification";
 export default function Header() {
   const user = true;
   return (
@@ -88,8 +89,17 @@ export default function Header() {
                   <span className="rounded-full border border-white p-1.5">
                     <MdSearch size={20} className="text-white" />
                   </span>
-                  <span className="rounded-full border border-white p-1.5">
-                    <IoMdNotifications size={20} className="text-white" />
+                  <span className="rounded-full border border-white p-1.5 dropdown dropdown-bottom dropdown-end">
+                    {/* <UserRound className="text-black cursor-pointer" /> */}
+
+                    <div tabIndex={0}>
+                      <IoMdNotifications
+                        fill="gray"
+                        size={20}
+                        className="text-white"
+                      />
+                      <ProfileNotification />
+                    </div>
                   </span>
                 </div>
                 <div className="flex items-center gap-px">

@@ -3,7 +3,7 @@ import { createContext, useState, useEffect, useMemo } from "react";
 import SideBar from "../_components/SideBar";
 import ProfileNotification from "../_components/ProfileNotification";
 import Link from "next/link";
-import { FaRegUser } from "react-icons/fa";
+import { FaBell, FaRegUser } from "react-icons/fa";
 import DashboardHeader from "../_components/DashboardHeader";
 import { usePathname } from "next/navigation";
 
@@ -81,7 +81,19 @@ export default function DashboardLayout({
                 </span>
 
                 <div className="flex items-center gap-[52px]">
-                  <ProfileNotification />
+                  <div className="w-9 h-9 rounded-lg bg-[#ffff] flex items-center justify-center">
+                    {/* <UserRound className="text-black cursor-pointer" /> */}
+                    <div className="dropdown dropdown-bottom dropdown-end">
+                      <div tabIndex={0} className="m-1">
+                        <FaBell
+                          fill="gray"
+                          size={20}
+                          className="cursor-pointer"
+                        />
+                        <ProfileNotification />
+                      </div>
+                    </div>
+                  </div>
                   <div className="w-9 h-9 rounded-lg bg-[#ffff] flex items-center justify-center">
                     <Link href="/dashboard/profile">
                       <button>

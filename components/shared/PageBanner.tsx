@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const PageBanner = () => {
   return (
-    <section className="relative w-full h-[320px] md:h-[380px] lg:h-[420px] overflow-hidden">
+    <section className="relative w-full h-80 md:h-[380px] lg:h-[420px]">
       {/* Background Image */}
       <Image
         src="/pictures/banner.png" // place image in public folder
