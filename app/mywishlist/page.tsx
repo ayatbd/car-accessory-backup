@@ -1,5 +1,6 @@
 import Container from "@/components/shared/Container";
 import Image from "next/image";
+import { BsCart3 } from "react-icons/bs";
 
 export default function WishlistPage() {
   const items = Array(12).fill({
@@ -15,21 +16,24 @@ export default function WishlistPage() {
     <div className="bg-[#222222]">
       <Container>
         <div className="min-h-screen text-white px-6 py-10">
-          <h1 className="text-xl font-semibold mb-2">My wishlist</h1>
-          <div className="w-20 h-0.5 bg-white mb-10"></div>
+          <span className="text-[32px] font-bold mb-2 border-b border-primary-yellow p-2">
+            My wishlist
+          </span>
           <div className="flex flex-col items-center text-center mb-12">
-            <div className="text-4xl mb-4">♡</div>
-            <p className="text-gray-300 mb-2">There are no favourites yet.</p>
-            <p className="text-gray-400 mb-6">
-              Add your favourites to wishlist and they will show here.
-            </p>
-            <button className="border border-yellow-200 text-yellow-200 px-4 py-2 rounded-md text-sm">
+            <div className="text-[60px] mb-4 text-primary-yellow">♡</div>
+            <h1 className="text-white mb-6 flex flex-col gap-1">
+              <span>There are no favourites yet.</span>
+              <span>
+                Add your favourites to wishlist and they will show here.
+              </span>
+            </h1>
+            <button className="border border-primary-yellow text-primary-yellow px-4 py-2 rounded-md text-sm">
               CONTINUE SHOPPING
             </button>
           </div>
 
-          <div className="mb-6">
-            <button className="bg-yellow-200 text-black px-4 py-1 rounded-md text-sm font-medium">
+          <div className="mb-20">
+            <button className="bg-primary-yellow text-black px-3 py-3 rounded-md text-[32px] font-medium">
               Just For You
             </button>
           </div>
@@ -38,7 +42,7 @@ export default function WishlistPage() {
             {items.map((item, index) => (
               <div
                 key={index}
-                className="border space-y-6 border-yellow-200 rounded-xl p-3 bg-[#0a0a0a] shadow-md"
+                className="border space-y-6 border-primary-yellow rounded-xl p-3 shadow-md"
               >
                 <div className="">
                   <Image
@@ -52,18 +56,20 @@ export default function WishlistPage() {
                 <div>
                   <p className="text-[20px] text-gray-300 mb-5">{item.title}</p>
 
-                  <div className="flex justify-between items-center mb-3">
+                  <div className="flex justify-between items-center mb-1">
                     <span className="font-semibold text-white">
                       {item.price}
                     </span>
-                    <button className="border border-yellow-200 text-yellow-200 px-2 py-1 rounded-md text-xs">
-                      🛒
+                    <button className="px-2 py-1 bg-primary-yellow rounded-md text-xs">
+                      <BsCart3 size={28} color="black" />
                     </button>
                   </div>
 
-                  <div className="flex items-center text-gray-400 text-xs gap-1">
+                  <div className="flex items-center text-gray-400 text-lg gap-1">
                     <span>★★★★☆</span>
-                    <span>({item.reviews})</span>
+                    <span className="text-primary-yellow">
+                      ({item.reviews})
+                    </span>
                   </div>
                 </div>
               </div>
