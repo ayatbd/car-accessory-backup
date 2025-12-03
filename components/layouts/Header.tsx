@@ -11,6 +11,8 @@ import { Layout, Drawer, Button } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import ProfileNotification from "@/app/(withDashboard)/_components/ProfileNotification";
+import { User } from "lucide-react";
+import UserDropdown from "../ui/UserDropdown";
 
 export default function Header() {
   const { Header: AntHeader } = Layout;
@@ -89,33 +91,11 @@ export default function Header() {
                       <div tabIndex={0}>
                         <IoMdNotifications size={20} />
                         <ProfileNotification />
-                      </div>  
+                      </div>
                     </span>
                   </div>
 
-                  <div className="dropdown dropdown-end cursor-pointer">
-                    <div tabIndex={0} role="button" className="">
-                      <div className="flex items-center gap-px">
-                        <span className="rounded-full bg-white p-1.5">
-                          <FaRegUser size={20} className="text-black" />
-                        </span>
-                        <span>
-                          <RiArrowDropDownLine size={20} />
-                        </span>
-                      </div>
-                    </div>
-                    <ul
-                      tabIndex="-1"
-                      className="dropdown-content  menu bg-base-100 rounded-sm z-1 w-52 p-2 shadow-sm text-black"
-                    >
-                      <li>
-                        <a>Item 1</a> 
-                      </li>
-                      <li>
-                        <a>Item 2</a>
-                      </li>
-                    </ul>
-                  </div>
+                  <UserDropdown />
                 </div>
               )}
             </div>
