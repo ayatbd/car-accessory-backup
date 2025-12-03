@@ -11,6 +11,7 @@ export default function AboutUs() {
           <div className="flex justify-between items-center w-full gap-14">
             {/* <h2 className="text-3xl font-medium mb-4">ABOUT US</h2> */}
             <Image
+              className="hidden md:block"
               src="/pictures/about_us/wind1.png"
               alt=""
               width={216}
@@ -22,6 +23,7 @@ export default function AboutUs() {
           service, integrity and excellence."
             />
             <Image
+              className="hidden md:block"
               src="/pictures/about_us/wind2.png"
               alt=""
               width={216}
@@ -39,7 +41,7 @@ export default function AboutUs() {
               className="w-full h-auto rounded-lg"
             />
           </div>
-          <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 mt-20">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-12 mt-10 md:mt-20">
             {/* <!-- Box 1 --> */}
             <div>
               <h3 className="text-[24px] font-medium text-[#EAC88C] mb-4">

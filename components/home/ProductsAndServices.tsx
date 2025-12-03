@@ -54,19 +54,19 @@ export default function ProductAndServices() {
         <div className="px-5 md:px-10 py-10 text-white">
           {/* Tabs */}
           <div className="flex justify-center items-center">
-            <div className="flex p-[5px] max-w-[730px] bg-white rounded-md items-center justify-center gap-4 overflow-x-auto scrollbar-hide">
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setActive(cat)}
-                  className={`px-3 py-2 rounded-md text-[20px] text-[#222222] whitespace-nowrap hover:bg-[#222222] hover:text-white hover:cursor-pointer transition duration-300 ease-in-out
+            <div className="p-[5px] max-w-[730px] bg-white rounded-md gap-4 overflow-x-auto scrollbar-hide">
+              <div className="flex gap-2">
+                {categories.map((cat) => (
+                  <button
+                    key={cat}
+                    onClick={() => setActive(cat)}
+                    className={`px-3 py-2 rounded-md lg:text-[20px] md:text-[18px] sm:text-[16px] text-[#222222] whitespace-nowrap hover:bg-[#222222] hover:text-white hover:cursor-pointer transition duration-300 ease-in-out
                 ${active === cat ? "bg-[#222222] text-white" : ""}`}
-                >
-                  {cat}
-                </button>
-              ))}
-
-              <button className="text-xl ml-1">&gt;</button>
+                  >
+                    {cat}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
 

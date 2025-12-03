@@ -4,6 +4,7 @@ import Container from "@/components/shared/Container";
 import Image from "next/image";
 import { FaRegCommentDots } from "react-icons/fa";
 import ProductReviews from "./_componets/ProductReview";
+import Link from "next/link";
 
 const ProductShowcase = ({ params }: { params: { id: string } }) => {
   const { id } = params;
@@ -11,7 +12,7 @@ const ProductShowcase = ({ params }: { params: { id: string } }) => {
   return (
     <div className="min-h-screen text-white bg-[#222222]">
       <Container>
-        <div className="w-full flex justify-center py-16 px-4">
+        <div className="w-full flex justify-center py-12 px-4">
           <div className="max-w-[1080px] w-full flex flex-col lg:flex-row items-center gap-20">
             {/* LEFT — IMAGE */}
             <div className="w-full lg:w-1/2 relative flex justify-center">
@@ -51,9 +52,11 @@ const ProductShowcase = ({ params }: { params: { id: string } }) => {
               </div>
 
               {/* BUTTON */}
-              <button className="mt-8 bg-primary-yellow hover:bg-[#e9c987] text-black font-semibold px-11 py-4 rounded-sm transition shadow-lg cursor-pointer">
-                Request to service
-              </button>
+              <Link href="/customerinfo">
+                <button className="mt-8 bg-primary-yellow hover:bg-[#e9c987] text-black font-semibold px-11 py-4 rounded-sm transition shadow-lg cursor-pointer">
+                  Request to service
+                </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -43,7 +43,7 @@ export default function Shop() {
         <div className="relative mx-auto py-10">
           {/* Navigation Buttons */}
           <div className="swiper-button-prev left-0! text-white! border! !border-white !p-4 !rounded-sm hover:bg-[#FFE6B9] hover:text-black! transition duration-300 ease-in-out"></div>
-          <div className="swiper-button-next right-0! text-white! !border !border-white !p-4 !rounded-sm hover:bg-[#FFE6B9] hover:text-black! transition duration-300 ease-in-out"></div>
+          <div className="swiper-button-next right-0! text-white! border! !border-white !p-4 !rounded-sm hover:bg-[#FFE6B9] hover:text-black! transition duration-300 ease-in-out"></div>
 
           <Swiper
             modules={[Navigation]}
@@ -55,7 +55,11 @@ export default function Shop() {
             slidesPerView={3}
             loop={true}
             centeredSlides={false}
-            className="mySwiper"
+            breakpoints={{
+              0: { slidesPerView: 1 },
+              768: { slidesPerView: 3 },
+            }}
+            className="mySwiper swiper2"
           >
             {data.map((item) => (
               <SwiperSlide key={item.id}>

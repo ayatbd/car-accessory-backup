@@ -9,31 +9,35 @@ export default function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="py-10 min-h-screen bg-[#222222]">
-      <div className="flex items-center justify-center mb-14">
+    <div className="py-10 min-h-screen bg-[#222222] flex flex-col">
+      {/* Logo */}
+      <div className="flex items-center justify-center mb-10">
         <Image src="/pictures/logo(2).png" alt="" width={150} height={135} />
       </div>
-      <div className="flex items-center justify-center px-4">
-        <div className="w-full max-w-[979] text-white">
-          <div className="px-[165px] space-y-5">
+
+      <div className="flex items-center justify-center px-4 w-full">
+        <div className="w-full max-w-3xl text-white">
+          <div className="px-4 sm:px-10 md:px-20 lg:px-28 space-y-5">
             {/* Title */}
             <div className="text-center space-y-2">
-              <h1 className="text-[40px] font-semibold">
-                Great to have you back !
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
+                Great to have you back!
               </h1>
             </div>
           </div>
+
           {/* Divider */}
-          <div className="flex items-center gap-5 my-9">
-            <div className="flex-1 h-[2px] bg-gray-600"></div>
+          <div className="flex items-center gap-5 my-9 px-4 sm:px-10 md:px-20 lg:px-28">
+            <div className="flex-1 h-[1px] bg-gray-600"></div>
             <span className="text-gray-400 text-sm">or</span>
-            <div className="flex-1 h-[2px] bg-gray-600"></div>
+            <div className="flex-1 h-[1px] bg-gray-600"></div>
           </div>
+
           {/* Login Form */}
-          <form className="space-y-5 px-[165px]">
+          <form className="space-y-5 px-4 sm:px-10 md:px-20 lg:px-28">
             {/* Email */}
             <div className="space-y-1">
-              <label className="text-[20px]">Username or Email</label>
+              <label className="text-lg">Username or Email</label>
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -44,14 +48,15 @@ export default function SignIn() {
             {/* Password */}
             <div className="space-y-1">
               <div className="flex items-center justify-between">
-                <label className="text-[20 px]">Password</label>
+                <label className="text-lg">Password</label>
                 <Link
                   href=""
-                  className="text-[20 px] px-11 border-b text-[#FFE6B9]"
+                  className="text-sm text-[#FFE6B9] hover:underline"
                 >
                   Forgot
                 </Link>
               </div>
+
               <div className="relative">
                 <input
                   type={showPassword ? "text" : "password"}
@@ -72,7 +77,7 @@ export default function SignIn() {
               </div>
             </div>
 
-            {/* Forgot password */}
+            {/* Forgot password small link */}
             <div className="flex justify-end -mt-2">
               <a
                 href="/forgot-password"
@@ -91,10 +96,10 @@ export default function SignIn() {
             </button>
 
             {/* Register Link */}
-            <p className="text-center border-t py-6 space-x-2 text-sm text-gray-300 mt-8">
-              Captures collects and uses personal data in accordance with
-              our Privacy Policy. By creating an account, you agree to our Terms
-              & Conditions.
+            <p className="text-center border-t py-6 text-xs sm:text-sm text-gray-300 mt-8">
+              Captures collects and uses personal data in accordance with our
+              Privacy Policy. By creating an account, you agree to our Terms &
+              Conditions.
             </p>
           </form>
         </div>

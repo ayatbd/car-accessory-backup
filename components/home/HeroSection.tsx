@@ -7,16 +7,16 @@ const HeroSection = () => {
       <Container>
         <div className="px-4 md:px-6 md:grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* LEFT CONTENT */}
-          <div className="space-y-6">
+          <div className="space-y-6 md:text-start text-center">
             {/* GOLD LINE + TITLE */}
-            <div className="flex gap-4 md:gap-6 items-start">
-              <div className="w-1 bg-[#EAC88C] h-24 md:h-40 rounded-full"></div>
+            <div className="flex gap-4 md:gap-6 items-start md:justify-start justify-center">
+              <div className="w-1 hidden md:block bg-[#EAC88C] h-24 md:h-40 rounded-full"></div>
 
               <div>
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[70px] font-bold leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[70px] font-bold leading-tight">
                   Welcome to QC
                 </h1>
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[70px] font-bold text-[#EAC88C] leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[70px] font-bold text-[#EAC88C] leading-tight">
                   Car Accessories
                 </h1>
 
@@ -29,12 +29,12 @@ const HeroSection = () => {
             </div>
 
             {/* CONTACT BUTTON */}
-            <button className="border border-white px-6 sm:px-8 py-3 rounded-md text-base sm:text-lg font-semibold hover:bg-white hover:text-black transition">
+            <button className="border border-white px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 rounded-md text-sm sm:text-base md:text-lg font-semibold hover:bg-white hover:text-black transition">
               Contact us →
             </button>
 
             {/* STATS */}
-            <div className="flex gap-10 sm:gap-14 pt-4">
+            <div className="flex md:flex-row flex-col md:justify-start justify-center md:gap-7 lg:gap-10 gap-4 pt-4">
               <div>
                 <h2 className="text-4xl sm:text-5xl md:text-[50px] font-bold text-[#EAC88C]">
                   150+

@@ -37,7 +37,7 @@ export default function Header() {
               </div>
 
               {/* CENTER — Menu */}
-              <ul className="flex items-center lg:gap-16 md:gap-6 gap-3 lg:text-[24px] md:text-[18px] text-[16px] font-light">
+              <ul className="headerList flex items-center lg:gap-16 md:gap-6 gap-3 lg:text-[24px] md:text-[18px] text-[16px] font-light">
                 <li>
                   <Link href="/" className="hover:text-[#e8d39f]">
                     Home
@@ -49,7 +49,7 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/allproducts" className="hover:text-[#e8d39f]">
+                  <Link href="/shop" className="hover:text-[#e8d39f]">
                     Shop
                   </Link>
                 </li>
@@ -66,7 +66,7 @@ export default function Header() {
               </ul>
 
               {/* RIGHT — Buttons */}
-              {!user ? (
+              {user ? (
                 <div className="flex items-center gap-4">
                   <Link href="/signin">
                     <button className="px-6 py-2 rounded-md border border-[#e8d39f] hover:bg-[#e8d39f] hover:text-black">
@@ -171,7 +171,7 @@ export default function Header() {
 
               {/* RIGHT — User Actions */}
               <div className="lg:mt-10 md:mt-7 mt-5">
-                {!user ? (
+                {user ? (
                   <div className="flex flex-col gap-4">
                     <Link href="/signin">
                       <button className="w-full lg:px-6 px-4 py-2 rounded-md border border-[#e8d39f] text-white">

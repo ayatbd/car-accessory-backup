@@ -9,7 +9,7 @@ export default function LoginPage() {
 
   return (
     <div className="py-10 min-h-screen bg-[#222222]">
-      <div className="w-full mx-auto max-w-[979] text-white py-[200px]">
+      <div className="w-full mx-auto max-w-[800px] text-white py-[50px]">
         <form className="space-y-5 py-[100px] px-[165px] border border-primary-yellow rounded-xl">
           {/* Password */}
           <div className="space-y-1">

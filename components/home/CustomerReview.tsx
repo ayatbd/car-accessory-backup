@@ -1,6 +1,4 @@
 "use client";
-import styles from "./CustomerReview.module.css";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
@@ -75,7 +73,7 @@ export default function CustomerReview() {
                 slidesPerView: 2.2,
               },
             }}
-            className={`py-14 ${styles.customStyle1}`}
+            className={`py-14`}
           >
             {testimonials.map((item) => (
               <SwiperSlide key={item.id}>

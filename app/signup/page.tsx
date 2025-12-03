@@ -10,20 +10,24 @@ export default function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="py-10 bg-[#222222]">
-      <div className="flex items-center justify-center mb-10">
-        <Image src="/pictures/logo(2).png" alt="" width={150} height={135} />
+    <div className="py-5 bg-[#222222] flex flex-col">
+      <div className="flex items-center justify-center mb-5">
+        <Image src="/pictures/logo(2).png" alt="" width={125} height={110} />
       </div>
-      <div className="flex items-center justify-center px-4">
-        <div className="w-full max-w-[979] text-white">
-          <div className="px-[165px] space-y-5">
+
+      <div className="flex items-center justify-center px-4 w-full">
+        <div className="w-full max-w-3xl text-white">
+          <div className="px-4 sm:px-10 md:px-20 lg:px-28 space-y-5">
             {/* Title */}
             <div className="text-center space-y-2">
-              <h1 className="text-[40px] font-semibold">Sign Up From</h1>
-              <p className="text-[20px] text-gray-300">
-                Create your account easy with less information.
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
+                Sign Up Form
+              </h1>
+              <p className="text-base sm:text-lg text-gray-300">
+                Create your account easily with less information.
               </p>
             </div>
+
             {/* Social login */}
             <button className="w-full flex items-center justify-center gap-3 border border-gray-500 py-3 rounded-md hover:bg-white/10 transition">
               <FaGoogle size={18} />
@@ -33,65 +37,60 @@ export default function SignUp() {
               <FaFacebookF size={18} />
               Continue with Facebook
             </button>
+
             {/* Divider */}
             <div className="flex items-center gap-5">
-              <div className="flex-1 h-[2px] bg-gray-600"></div>
+              <div className="flex-1 h-[1px] bg-gray-600"></div>
               <span className="text-gray-400 text-sm">or</span>
-              <div className="flex-1 h-[2px] bg-gray-600"></div>
+              <div className="flex-1 h-[1px] bg-gray-600"></div>
             </div>
           </div>
-          {/* Login Form */}
-          <form className="space-y-5 px-[165px]">
-            {/* Email */}
-            <div className="space-y-1">
-              <label className="text-[20px]">First Name</label>
-              <input
-                type="text"
-                placeholder="Enter your name"
-                className="w-full px-4 py-3 rounded-md bg-transparent border border-gray-600 text-sm focus:outline-none focus:border-white"
-              />
-            </div>
+
+          {/* Form */}
+          <form className="space-y-5 px-4 sm:px-10 md:px-20 lg:px-28">
             {/* First Name */}
             <div className="space-y-1">
-              <label className="text-[20px]">Last Name</label>
+              <label className="text-lg">First Name</label>
               <input
                 type="text"
-                placeholder="Enter your name"
+                placeholder="Enter your first name"
                 className="w-full px-4 py-3 rounded-md bg-transparent border border-gray-600 text-sm focus:outline-none focus:border-white"
               />
             </div>
+
             {/* Last Name */}
             <div className="space-y-1">
-              <label className="text-[20px]">Email</label>
+              <label className="text-lg">Last Name</label>
               <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full px-4 py-3 rounded-md bg-transparent border border-gray-600 text-sm focus:outline-none focus:border-white"
-              />
-            </div>
-            {/* Contact Number */}
-            <div className="space-y-1">
-              <label className="text-[20px]">Contact Number</label>
-              <input
-                type="email"
-                placeholder="+880#########"
+                type="text"
+                placeholder="Enter your last name"
                 className="w-full px-4 py-3 rounded-md bg-transparent border border-gray-600 text-sm focus:outline-none focus:border-white"
               />
             </div>
 
             {/* Email */}
             <div className="space-y-1">
-              <label className="text-[20px]">Email</label>
+              <label className="text-lg">Email</label>
               <input
                 type="email"
                 placeholder="Enter your email"
+                className="w-full px-4 py-3 rounded-md bg-transparent border border-gray-600 text-sm focus:outline-none focus:border-white"
+              />
+            </div>
+
+            {/* Contact Number */}
+            <div className="space-y-1">
+              <label className="text-lg">Contact Number</label>
+              <input
+                type="text"
+                placeholder="+880#########"
                 className="w-full px-4 py-3 rounded-md bg-transparent border border-gray-600 text-sm focus:outline-none focus:border-white"
               />
             </div>
 
             {/* Password */}
             <div className="space-y-1">
-              <label className="text-[20px]">Password</label>
+              <label className="text-lg">Password</label>
               <div className="relative">
                 <input
                   type={showPassword ? "text" : "password"}
@@ -122,7 +121,7 @@ export default function SignUp() {
               </a>
             </div>
 
-            {/* Login Button */}
+            {/* Submit Button */}
             <button
               type="submit"
               className="w-full bg-[#F3D29C] text-black py-3 rounded-md text-sm font-medium hover:bg-[#eac88d] transition"
