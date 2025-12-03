@@ -6,6 +6,7 @@
     --color-primary-yellow: #FFE6B9;
 }
 
+
 /* ========================================================== */
 .headerList li {
     transition: all;
@@ -77,12 +78,4 @@
 .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
-}
-
-/* ================================ */
-.banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url();
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }

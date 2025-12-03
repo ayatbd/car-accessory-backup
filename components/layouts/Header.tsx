@@ -89,17 +89,32 @@ export default function Header() {
                       <div tabIndex={0}>
                         <IoMdNotifications size={20} />
                         <ProfileNotification />
-                      </div>
+                      </div>  
                     </span>
                   </div>
 
-                  <div className="flex items-center gap-px">
-                    <span className="rounded-full bg-white p-1.5">
-                      <FaRegUser size={20} className="text-black" />
-                    </span>
-                    <span>
-                      <RiArrowDropDownLine size={20} />
-                    </span>
+                  <div className="dropdown dropdown-end cursor-pointer">
+                    <div tabIndex={0} role="button" className="">
+                      <div className="flex items-center gap-px">
+                        <span className="rounded-full bg-white p-1.5">
+                          <FaRegUser size={20} className="text-black" />
+                        </span>
+                        <span>
+                          <RiArrowDropDownLine size={20} />
+                        </span>
+                      </div>
+                    </div>
+                    <ul
+                      tabIndex="-1"
+                      className="dropdown-content  menu bg-base-100 rounded-sm z-1 w-52 p-2 shadow-sm text-black"
+                    >
+                      <li>
+                        <a>Item 1</a> 
+                      </li>
+                      <li>
+                        <a>Item 2</a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               )}
@@ -197,7 +212,7 @@ export default function Header() {
                       </span>
                     </div>
 
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 cursor-pointer">
                       <span className="rounded-full bg-white p-1.5">
                         <FaRegUser size={22} className="text-black" />
                       </span>

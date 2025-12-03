@@ -53,7 +53,7 @@ const testimonials: Testimonial[] = [
 
 export default function CustomerReview() {
   return (
-    <div>
+    <div className="py-16">
       <Container>
         <div className="w-full">
           <div>

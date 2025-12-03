@@ -1,0 +1,8 @@
+.banner {
+    background-image: linear-gradient(rgba(34, 34, 34, 0.81), rgba(34, 34, 34, 0.81)),
+        url(../../public/pictures/shop/banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-color: rgb(34, 34, 34);
+}

@@ -1,5 +1,6 @@
-import Link from "next/link";
 import styles from "./../auth.module.css";
+import Link from "next/link";
+// import styles from "./../auth.module.css";
 const VerifyOTP = () => {
   return (
     <div

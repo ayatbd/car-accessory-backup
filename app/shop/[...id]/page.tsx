@@ -17,7 +17,7 @@ export default function CarTherapyCentre() {
   return (
     <div className="bg-[#222222]">
       <Container>
-        <div className="flex justify-center py-40 gap-5">
+        <div className="flex flex-col md:flex-row justify-center py-10 md:py-16 lg:py-28 gap-5">
           <div className="w-full bg-[#3a3a3a] text-white flex-8/12 rounded-xl pt-11 pl-7 pb-32">
             {/* ---------- HEADER ---------- */}
             <div className="space-y-1.5">
@@ -56,9 +56,9 @@ export default function CarTherapyCentre() {
 
               <p>
                 With service centres in Albany, Browns Bay and Whangaparaoa and
-                Parts and Finance in Albany we call ourselves a 'One Stop' shop.
-                All this coupled with excellent customer service makes Albany
-                Toyota a pleasure to deal with.
+                Parts and Finance in Albany we call ourselves a &apos;One
+                Stop&apos; shop. All this coupled with excellent customer
+                service makes Albany Toyota a pleasure to deal with.
               </p>
             </div>
 
@@ -96,7 +96,7 @@ export default function CarTherapyCentre() {
                     className="flex items-center justify-center gap-4"
                     key={idx}
                   >
-                    <p className=" w-24">{item.label}</p>
+                    <p className="w-24">{item.label}</p>
                     <div className="bg-white h-2 w-full rounded relative overflow-hidden">
                       <div
                         className="h-full bg-[#e2c878]"

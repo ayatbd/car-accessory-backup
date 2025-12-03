@@ -3,6 +3,7 @@
 import Container from "@/components/shared/Container";
 import PageBanner from "@/components/shared/PageBanner";
 import Image from "next/image";
+import Link from "next/link";
 import { FaStar } from "react-icons/fa";
 
 const workshops = [
@@ -66,7 +67,7 @@ const workshops = [
 
 export default function ShopPage() {
   return (
-    <div className="bg-[#111] min-h-screen px-4 overflow-hidden">
+    <div className="bg-[#111] min-h-screen overflow-hidden">
       <PageBanner title="Shop" subtitle="Shop" />
       <Container>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 my-24">
@@ -102,9 +103,11 @@ export default function ShopPage() {
                 </div>
                 <div className="">
                   {/* Visit Button */}
-                  <button className="mt-3 bg-[#F3D29C] text-black px-4 py-2 rounded-md text-sm font-semibold hover:bg-[#eac88d] transition">
-                    Visit
-                  </button>
+                  <Link href="/shop/${item.id}">
+                    <button className="mt-3 cursor-pointer bg-[#F3D29C] text-black px-4 py-2 rounded-md text-sm font-semibold hover:bg-[#eac88d] transition">
+                      Visit
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

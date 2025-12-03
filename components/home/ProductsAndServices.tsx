@@ -34,7 +34,37 @@ const cardData = [
     category: "Wheels",
   },
   {
-    id: 4,
+    id: 5,
+    title: "AC service & repair",
+    image: "/pictures/products$services/p$s1.png",
+    category: "GT-R Brake",
+  },
+  {
+    id: 6,
+    title: "AC service & repair",
+    image: "/pictures/products$services/p$s1.png",
+    category: "Car Lights",
+  },
+  {
+    id: 7,
+    title: "AC service & repair",
+    image: "/pictures/products$services/p$s1.png",
+    category: "GT-R Brake",
+  },
+  {
+    id: 8,
+    title: "AC service & repair",
+    image: "/pictures/products$services/p$s1.png",
+    category: "Ball Bearing",
+  },
+  {
+    id: 9,
+    title: "AC service & repair",
+    image: "/pictures/products$services/p$s1.png",
+    category: "Ball Bearing",
+  },
+  {
+    id: 10,
     title: "AC service & repair",
     image: "/pictures/products$services/p$s1.png",
     category: "Car Lights",
@@ -72,7 +102,7 @@ export default function ProductAndServices() {
 
           {/* Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mt-12">
-            {filtered.map((item) => (
+            {filtered.slice(0, 8).map((item) => (
               <div
                 key={item.id}
                 className="border border-gray-600 rounded-lg overflow-hidden"
