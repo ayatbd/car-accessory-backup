@@ -82,21 +82,25 @@ export default function ProductAndServices() {
       <Container>
         <Title title="PRODUCTS & SERVICES"></Title>
         <div className="px-5 w-full md:px-10 py-10 text-white">
-          {/* Tabs */}
-          <div className="flex items-center justify-center">
-            <div className="p-[5px] mx-auto inline-block bg-white rounded-md gap-4">
-              <div className="flex md:flex-row flex-col gap-2">
+          <div className="text-center">
+            <div className="lg:inline-block">
+              <ul className="flex max-lg:flex-col max-lg:space-y-4 gap-2 p-1 bg-gray-100 rounded-md overflow-hidden">
                 {categories.map((cat) => (
-                  <button
+                  <li
                     key={cat}
                     onClick={() => setActive(cat)}
-                    className={`px-3 py-2 rounded-md lg:text-[20px] md:text-[18px] sm:text-[16px] text-[#222222] whitespace-nowrap hover:bg-[#222222] hover:text-white hover:cursor-pointer transition duration-300 ease-in-out
-                ${active === cat ? "bg-[#222222] text-white" : ""}`}
+                    className={`tab text-[15px] py-3.5 px-7 border-t-[3px] cursor-pointer rounded-md transition
+              ${
+                active === cat
+                  ? "text-white bg-[#222222] font-semibold text"
+                  : "text-black hover:text-black hover:bg-gray-300 font-medium"
+              }
+            `}
                   >
                     {cat}
-                  </button>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           </div>
 

@@ -1,32 +1,39 @@
 "use client";
-import { createContext, useState, useEffect, useMemo } from "react";
+
+import { createContext, useState, useEffect, useMemo, ReactNode } from "react";
+import { usePathname } from "next/navigation";
 import SideBar from "../_components/SideBar";
 import ProfileNotification from "../_components/ProfileNotification";
+import DashboardHeader from "../_components/DashboardHeader";
 import Link from "next/link";
 import { FaBell, FaRegUser } from "react-icons/fa";
-import DashboardHeader from "../_components/DashboardHeader";
-import { usePathname } from "next/navigation";
 
-type PageTitleContextType = {
+/* ---------------------------------------------
+   1. Create a typed context for dynamic page titles
+-------------------------------------------------- */
+export type PageTitleContextType = {
   title: string;
-  setTitle: (s: string) => void;
+  setTitle: (title: string) => void;
 };
+
+// Default values (used only if Provider missing)
 export const PageTitleContext = createContext<PageTitleContextType>({
   title: "Dashboard",
   setTitle: () => {},
 });
 
-export default function DashboardLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  // dynamic dashboard title
-  const pathname = usePathname();
-  const [title, setTitle] = useState("Dashboard");
+/* ---------------------------------------------
+   2. Dashboard Layout Component
+-------------------------------------------------- */
+export default function DashboardLayout({ children }: { children: ReactNode }) {
+  const pathname = usePathname(); // get current route
+  const [title, setTitle] = useState<string>("Dashboard");
 
-  // mapping from path -> title
-  const titleMap = useMemo(
+  /* ---------------------------------------------
+     3. Map of known routes → friendly page titles
+     useMemo prevents recreation on every render
+  -------------------------------------------------- */
+  const titleMap = useMemo<Record<string, string>>(
     () => ({
       "/dashboard": "Dashboard",
       "/dashboard/users": "Users",
@@ -38,69 +45,81 @@ export default function DashboardLayout({
       "/dashboard/changepassword": "Change Password",
       "/dashboard/updatepassword": "Update Password",
       "/dashboard/updateprofile": "Update Profile",
-      "/dashboard/termofservices": "Term of services",
+      "/dashboard/termofservices": "Term of Services",
     }),
     []
   );
 
+  /* Dynamic navbar background color */
   const isDashboard = pathname === "/dashboard";
   const navbarColor = isDashboard ? "bg-[#181818]" : "bg-[#6B5E46]";
 
+  /* ---------------------------------------------
+     4. Update page title whenever path changes
+     - Use mapped title if available
+     - Otherwise create title from last URL segment
+  -------------------------------------------------- */
   useEffect(() => {
-    // If there's an exact mapping use it; otherwise derive from last segment
     if (!pathname) return;
-    const mapped = titleMap[pathname];
-    if (mapped) {
-      setTitle(mapped);
+
+    // If exact route exists in map, use its title
+    const mappedTitle = titleMap[pathname];
+    if (mappedTitle) {
+      setTitle(mappedTitle);
       return;
     }
 
-    // fallback: get last segment and capitalize
-    const parts = pathname.split("/").filter(Boolean); // removes empty
-    const last = parts.length ? parts[parts.length - 1] : "dashboard";
-    const friendly =
+    // Fallback: use last segment of URL & capitalize
+    const segments = pathname.split("/").filter(Boolean);
+    const last = segments.length ? segments[segments.length - 1] : "dashboard";
+
+    const autoTitle =
       last === "dashboard"
         ? "Dashboard"
         : last.charAt(0).toUpperCase() + last.slice(1);
-    setTitle(friendly);
+
+    setTitle(autoTitle);
   }, [pathname, titleMap]);
 
+  /* ---------------------------------------------
+     5. Component Layout
+  -------------------------------------------------- */
   return (
     <PageTitleContext.Provider value={{ title, setTitle }}>
-      <div className="min-h-screen flex ">
-        {/* Sidebar */}
+      <div className="min-h-screen flex">
+        {/* Left Sidebar */}
         <SideBar />
-        {/* Main Content Area */}
+
+        {/* Right Side (Main Area) */}
         <div className="min-w-[84%]">
           <main className="flex-1">
-            {/* Top header */}
+            {/* Top Navigation Header */}
             <div className={`px-[134px] ${navbarColor}`}>
               <header className="flex items-center justify-between py-7">
+                {/* Page Title & Breadcrumb Area */}
                 <span>
-                  <DashboardHeader></DashboardHeader>
+                  <DashboardHeader />
                 </span>
 
+                {/* Notifications + Profile */}
                 <div className="flex items-center gap-[52px]">
-                  <div className="w-9 h-9 rounded-lg bg-[#ffff] flex items-center justify-center">
-                    {/* <UserRound className="text-black cursor-pointer" /> */}
+                  {/* Notification Bell */}
+                  <div className="w-9 h-9 rounded-lg bg-white flex items-center justify-center">
                     <div className="dropdown dropdown-bottom dropdown-end">
-                      <div tabIndex={0} className="m-1">
-                        <FaBell
-                          fill="gray"
-                          size={20}
-                          className="cursor-pointer"
-                        />
+                      <div tabIndex={0} className="m-1 cursor-pointer">
+                        <FaBell fill="gray" size={20} />
                         <ProfileNotification />
                       </div>
                     </div>
                   </div>
-                  <div className="w-9 h-9 rounded-lg bg-[#ffff] flex items-center justify-center">
+
+                  {/* Profile Icon */}
+                  <div className="w-9 h-9 rounded-lg bg-white flex items-center justify-center">
                     <Link href="/dashboard/profile">
                       <button>
                         <FaRegUser
                           size={20}
-                          color="primary-black"
-                          className=" cursor-pointer"
+                          className="cursor-pointer text-black"
                         />
                       </button>
                     </Link>
@@ -109,7 +128,7 @@ export default function DashboardLayout({
               </header>
             </div>
 
-            {/* children  */}
+            {/* Render children pages */}
             {children}
           </main>
         </div>

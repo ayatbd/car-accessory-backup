@@ -9,7 +9,7 @@ export default function ContactPage() {
         <div className="pt-20">
           <div className="text-white">
             {/* FLEX WRAPPER */}
-            <div className="flex flex-col-reverse lg:flex-row justify-center gap-10 lg:gap-28">
+            <div className="flex flex-col-reverse lg:flex-row justify-center gap-10 lg:gap-28 px-10">
               {/* LEFT SIDE (FORM) */}
               <div className="flex-1">
                 <h1 className="text-3xl sm:text-4xl font-bold text-[#F1D8A6] mb-2">
@@ -20,10 +20,10 @@ export default function ContactPage() {
                   We are here for you! How can we help?
                 </p>
 
-                <form className="space-y-6">
+                <form className="lg:space-y-6 space-y-4">
                   {/* Name */}
                   <div>
-                    <label className="block mb-1 text-white text-lg">
+                    <label className="block mb-1 text-white md:text-lg sm:text-xl">
                       Name
                     </label>
                     <input
@@ -34,7 +34,7 @@ export default function ContactPage() {
 
                   {/* Email */}
                   <div>
-                    <label className="block mb-1 text-white text-lg">
+                    <label className="block mb-1 text-white md:text-lg sm:text-xl">
                       Email
                     </label>
                     <input
@@ -45,7 +45,7 @@ export default function ContactPage() {
 
                   {/* Message */}
                   <div>
-                    <label className="block mb-1 text-white text-lg">
+                    <label className="block mb-1 text-white md:text-lg sm:text-xl">
                       Message
                     </label>
                     <textarea
@@ -57,7 +57,7 @@ export default function ContactPage() {
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full py-3.5 bg-[#FBE4B2] text-black rounded-xl text-xl font-medium shadow-[0_0_15px_1px_rgba(148,55,255,0.5)] hover:opacity-90 active:scale-95 transition"
+                    className="w-full py-3.5 md:py-4 lg:py-5 bg-[#FBE4B2] text-black rounded-xl md:rounded-2xl text-lg md:text-xl lg:text-2xl font-medium shadow-[0_0_15px_1px_rgba(148,55,255,0.5)] hover:opacity-90 transition"
                   >
                     Submit
                   </button>

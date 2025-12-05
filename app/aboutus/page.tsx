@@ -61,7 +61,7 @@ const page = () => {
                   height={725}
                   src="/pictures/about_us/image3.jpg" // replace with your actual image path
                   alt="Main"
-                  className="w-[597px] h-[725px] object-cover rounded-xl"
+                  className="max-w-[597px] max-h-[725px] object-cover rounded-xl"
                 />
 
                 {/* ABSOLUTE UPPER IMAGE */}
@@ -70,19 +70,19 @@ const page = () => {
                   height={498}
                   src="/pictures/about_us/image2.png" // replace with your actual image path
                   alt="Upper"
-                  className="absolute top-[50%] right-0 -translate-y-1/2 w-[452px] h-[498px] object-cover rounded-[5px] shadow-lg"
+                  className="absolute md:block hidden top-[50%] right-0 -translate-y-1/2 w-[452px] h-[498px] object-cover rounded-[5px] shadow-lg"
                 />
               </div>
             </div>
 
             {/* RIGHT TEXT SECTION */}
             <div className="flex-5/12">
-              <div className=" h-[455px] flex flex-col gap-[30px]">
+              <div className=" max:h-[455px] flex flex-col gap-[30px]">
                 <div>
-                  <p className="text-[#EAC87C] font-bold tracking-wide text-[20px]">
+                  <p className="text-[#EAC87C] font-bold tracking-wide lg:text-[20px] md:text-[16px] text-[14px]">
                     CAREFUL CRAFTED
                   </p>
-                  <h1 className="text-[40px] font-medium leading-tight">
+                  <h1 className="lg:text-[40px] md:text-[30px] sm:text-[22px] font-medium leading-tight">
                     Search, Select, Buy online
                   </h1>
                 </div>
@@ -104,8 +104,10 @@ const page = () => {
           </div>
         </div>
         <div className="mt-14">
-          <p className="text-[#FFE0A7] text-2xl">TESTIMONIAL</p>
-          <h1 className="text-[55px] font-bold text-white">
+          <p className="text-[#EAC87C] font-bold tracking-wide lg:text-[20px] md:text-[16px] text-[14px]">
+            TESTIMONIAL
+          </p>
+          <h1 className="lg:text-[40px] md:text-[30px] sm:text-[22px] font-medium text-white leading-tight">
             What customer say about Our services
           </h1>
         </div>

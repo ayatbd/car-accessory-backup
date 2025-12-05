@@ -35,18 +35,6 @@ export default function Navbar() {
       title: "Contact",
       href: "/contact",
     },
-    {user &&{
-      title: "My Order",
-      href: "/contact",
-    },
-    {
-      title: "My wishlist & followed stores",
-      href: "/contact",
-    },
-    {
-      title: "Log out",
-      href: "/contact",
-    }}
   ];
 
   // All Products & Service
@@ -114,10 +102,10 @@ export default function Navbar() {
                   <Link href="/">
                     <Image
                       src="/pictures/header_logo.png"
-                      width={40}
-                      height={40}
+                      width={48}
+                      height={48}
                       alt="logo"
-                      className="w-36 bg-gray-700 rounded-full"
+                      className=" bg-gray-700"
                     />
                   </Link>
                 </li>
@@ -160,8 +148,12 @@ export default function Navbar() {
                       <MdSearch color="#fff" size={20} />
                     </span>
                     <span className="rounded-full border border-white p-1.5 dropdown dropdown-bottom dropdown-end hover:cursor-pointer">
-                      <div tabIndex={0}>
-                        <IoMdNotifications color="#fff" size={20} />
+                      <div>
+                        <IoMdNotifications
+                          tabIndex={0}
+                          color="#fff"
+                          size={20}
+                        />
                         <ProfileNotification />
                       </div>
                     </span>

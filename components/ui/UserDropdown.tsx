@@ -41,7 +41,7 @@ export default function UserDropdown() {
 
       {/* Dropdown */}
       {open && (
-        <div className="absolute right-0 mt-3 w-96 bg-white rounded-sm shadow-xl p-6 z-50">
+        <div className="absolute right-0 mt-3 lg:w-96 md:w-80 w-72 bg-white rounded-sm shadow-xl p-6 z-50">
           {/* Close Button */}
           <button
             className="absolute top-3 right-3 bg-black rounded-full text-white p-0.5 cursor-pointer"
@@ -50,7 +50,7 @@ export default function UserDropdown() {
             <IoClose size={22} />
           </button>
 
-          <div className="space-y-6 text-gray-900 text-[18px]">
+          <div className="space-y-6 text-gray-900 lg:text-[18px] md:text-[16px] sm:text-[14px]">
             <Link
               href="/my-orders"
               className="flex items-center gap-4 hover:text-black hover:cursor-pointer hover:underline"

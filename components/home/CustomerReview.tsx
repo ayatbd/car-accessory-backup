@@ -77,7 +77,7 @@ export default function CustomerReview() {
           >
             {testimonials.map((item) => (
               <SwiperSlide key={item.id}>
-                <div className="bg-[#131313] overflow-hidden text-white rounded-xl p-8 flex items-center gap-6 shadow-[0_0_50px_rgba(255,255,255,0.25)]">
+                <div className="bg-[#131313] overflow-hidden text-white rounded-xl p-8 flex items-center gap-6">
                   {/* Image */}
                   <div
                     style={{ borderRadius: "0 16px 0 16px" }}
