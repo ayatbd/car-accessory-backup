@@ -50,7 +50,7 @@ const notifications: Notification[] = [
 const ProfileNotification = () => {
   return (
     <>
-      <ul className="dropdown-content menu bg-base-100 rounded-sm z-50 w-[506px] p-10 shadow-sm">
+      <ul className="dropdown-content menu bg-base-100 rounded-sm z-50 lg:w-[506px] md:w-[400px] sm:w-[320px] p-10 shadow-sm">
         {notifications.map((notification, id) => (
           <li key={id} className="flex gap-3 border-b pb-4">
             <span>

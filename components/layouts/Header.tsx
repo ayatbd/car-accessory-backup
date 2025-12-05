@@ -5,13 +5,10 @@ import Link from "next/link";
 import Container from "../shared/Container";
 import { MdSearch } from "react-icons/md";
 import { IoMdNotifications } from "react-icons/io";
-import { FaRegUser } from "react-icons/fa";
-import { RiArrowDropDownLine } from "react-icons/ri";
 import { Layout, Drawer, Button } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import ProfileNotification from "@/app/(withDashboard)/_components/ProfileNotification";
-import { User } from "lucide-react";
 import UserDropdown from "../ui/UserDropdown";
 
 export default function Header() {
@@ -82,7 +79,7 @@ export default function Header() {
                   </Link>
                 </div>
               ) : (
-                <div className="flex items-center justify-between gap-[170px]">
+                <div className="flex items-center justify-between lg:gap-[155px] md:gap-24">
                   <div className="flex items-center gap-5">
                     <span className="rounded-full border border-white p-1.5">
                       <MdSearch size={20} />
@@ -163,44 +160,6 @@ export default function Header() {
                   </Link>
                 </li>
               </ul>
-
-              {/* RIGHT — User Actions */}
-              <div className="lg:mt-10 md:mt-7 mt-5">
-                {user ? (
-                  <div className="flex flex-col gap-4">
-                    <Link href="/signin">
-                      <button className="w-full lg:px-6 px-4 py-2 rounded-md border border-[#e8d39f] text-white">
-                        Sign In
-                      </button>
-                    </Link>
-
-                    <Link href="/signup">
-                      <button className="w-full lg:px-6 px-4 py-2 rounded-md bg-[#e8d39f] text-black">
-                        Sign Up
-                      </button>
-                    </Link>
-                  </div>
-                ) : (
-                  <div className="space-y-6 text-white">
-                    <div className="flex items-center gap-5">
-                      <span className="rounded-full border border-white p-1.5">
-                        <MdSearch size={22} />
-                      </span>
-
-                      <span className="rounded-full border border-white p-1.5">
-                        <IoMdNotifications size={22} />
-                      </span>
-                    </div>
-
-                    <div className="flex items-center gap-3 cursor-pointer">
-                      <span className="rounded-full bg-white p-1.5">
-                        <FaRegUser size={22} className="text-black" />
-                      </span>
-                      <RiArrowDropDownLine size={22} />
-                    </div>
-                  </div>
-                )}
-              </div>
             </Drawer>
           </nav>
         </Container>

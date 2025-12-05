@@ -81,11 +81,11 @@ export default function ProductAndServices() {
     <div>
       <Container>
         <Title title="PRODUCTS & SERVICES"></Title>
-        <div className="px-5 md:px-10 py-10 text-white">
+        <div className="px-5 w-full md:px-10 py-10 text-white">
           {/* Tabs */}
-          <div className="flex justify-center items-center">
-            <div className="p-[5px] max-w-[730px] bg-white rounded-md gap-4 overflow-x-auto scrollbar-hide">
-              <div className="flex gap-2">
+          <div className="flex items-center justify-center">
+            <div className="p-[5px] mx-auto inline-block bg-white rounded-md gap-4">
+              <div className="flex md:flex-row flex-col gap-2">
                 {categories.map((cat) => (
                   <button
                     key={cat}

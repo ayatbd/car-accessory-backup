@@ -9,13 +9,16 @@ import Link from "next/link";
 
 export default function UserDropdown() {
   const [open, setOpen] = useState(false);
-  const ref = useRef();
+  const ref = useRef<HTMLDivElement | null>(null);
 
   // Close on outside click
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
-      if (!ref.current?.contains(e.target)) setOpen(false);
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
     };
+
     document.addEventListener("mousedown", handleClick);
     return () => document.removeEventListener("mousedown", handleClick);
   }, []);
@@ -30,7 +33,10 @@ export default function UserDropdown() {
         <span className="rounded-full bg-white p-1.5">
           <FaRegUser size={20} className="text-black" />
         </span>
-        <RiArrowDropDownLine size={22} className="text-white" />
+        <RiArrowDropDownLine
+          size={22}
+          className="text-white md:display-[unset] hidden"
+        />
       </button>
 
       {/* Dropdown */}
@@ -38,7 +44,7 @@ export default function UserDropdown() {
         <div className="absolute right-0 mt-3 w-96 bg-white rounded-sm shadow-xl p-6 z-50">
           {/* Close Button */}
           <button
-            className="absolute top-3 right-3 text-gray-600 hover:text-black cursor-pointer"
+            className="absolute top-3 right-3 bg-black rounded-full text-white p-0.5 cursor-pointer"
             onClick={() => setOpen(false)}
           >
             <IoClose size={22} />
@@ -47,21 +53,21 @@ export default function UserDropdown() {
           <div className="space-y-6 text-gray-900 text-[18px]">
             <Link
               href="/my-orders"
-              className="flex items-center gap-4 hover:text-black"
+              className="flex items-center gap-4 hover:text-black hover:cursor-pointer hover:underline"
             >
               <FiShoppingBag size={22} /> My Order
             </Link>
 
             <Link
               href="/wishlist"
-              className="flex items-center gap-4 hover:text-black"
+              className="flex items-center gap-4 hover:text-black hover:cursor-pointer hover:underline"
             >
               <FiHeart size={22} /> My wishlist & followed stores
             </Link>
 
             <Link
               href="/logout"
-              className="flex items-center gap-4 hover:text-black"
+              className="flex items-center gap-4 hover:text-black hover:cursor-pointer hover:underline"
             >
               <FiLogOut size={22} /> Log out
             </Link>

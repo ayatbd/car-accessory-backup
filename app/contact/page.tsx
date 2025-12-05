@@ -6,18 +6,20 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-[#222222]">
       <Container>
-        <div className=" mt-24">
-          <div className=" text-white">
-            <div className="flex justify-center gap-28">
+        <div className="pt-20">
+          <div className="text-white">
+            {/* FLEX WRAPPER */}
+            <div className="flex flex-col-reverse lg:flex-row justify-center gap-10 lg:gap-28">
+              {/* LEFT SIDE (FORM) */}
               <div className="flex-1">
-                {/* Header */}
-                <h1 className="text-4xl font-bold text-[#F1D8A6] mb-2">
+                <h1 className="text-3xl sm:text-4xl font-bold text-[#F1D8A6] mb-2">
                   Get in touch
                 </h1>
-                <p className="text-lg mb-8">
+
+                <p className="text-base sm:text-lg mb-8">
                   We are here for you! How can we help?
                 </p>
-                {/* Form */}
+
                 <form className="space-y-6">
                   {/* Name */}
                   <div>
@@ -26,7 +28,7 @@ export default function ContactPage() {
                     </label>
                     <input
                       type="text"
-                      className="w-full h-16 bg-transparent border-2 border-[#E8D39E] text-white rounded-xl px-3 outline-none focus:border-[#F7E3AC]"
+                      className="w-full h-14 sm:h-16 bg-transparent border-2 border-[#E8D39E] text-white rounded-xl px-3 outline-none focus:border-[#F7E3AC]"
                     />
                   </div>
 
@@ -37,7 +39,7 @@ export default function ContactPage() {
                     </label>
                     <input
                       type="email"
-                      className="w-full h-16 bg-transparent border-2 border-[#E8D39E] text-white rounded-xl px-3 outline-none focus:border-[#F7E3AC]"
+                      className="w-full h-14 sm:h-16 bg-transparent border-2 border-[#E8D39E] text-white rounded-xl px-3 outline-none focus:border-[#F7E3AC]"
                     />
                   </div>
 
@@ -61,35 +63,33 @@ export default function ContactPage() {
                   </button>
                 </form>
               </div>
-              <div className="flex-1">
+
+              {/* RIGHT SIDE (IMAGE + CONTACT INFO) */}
+              <div className="flex-1 flex flex-col items-center gap-6">
                 <Image
                   src="/pictures/contact.gif"
                   width={512}
                   height={512}
-                  alt=""
+                  alt="Contact"
+                  className="w-full max-w-sm mx-auto"
                 />
-                <div className="flex items-center justify-center">
-                  <ul>
-                    <li className="flex items-center justify-start gap-3">
-                      <span>
-                        <IoLocationOutline />
-                      </span>
-                      <span>545 Mavis Island, IL 99191</span>
-                    </li>
-                    <li className="flex items-center justify-start gap-3">
-                      <span>
-                        <IoLocationOutline />
-                      </span>
-                      <span>+2034 4040 3030</span>
-                    </li>
-                    <li className="flex items-center justify-start gap-3">
-                      <span>
-                        <IoLocationOutline />
-                      </span>
-                      <span>hello@gmail.com</span>
-                    </li>
-                  </ul>
-                </div>
+
+                <ul className="space-y-3 text-center lg:text-left">
+                  <li className="flex items-center gap-3 justify-center lg:justify-start">
+                    <IoLocationOutline />
+                    <span>545 Mavis Island, IL 99191</span>
+                  </li>
+
+                  <li className="flex items-center gap-3 justify-center lg:justify-start">
+                    <IoLocationOutline />
+                    <span>+2034 4040 3030</span>
+                  </li>
+
+                  <li className="flex items-center gap-3 justify-center lg:justify-start">
+                    <IoLocationOutline />
+                    <span>hello@gmail.com</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
