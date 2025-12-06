@@ -8,9 +8,12 @@ import { MdSearch } from "react-icons/md";
 import { IoMdNotifications } from "react-icons/io";
 import ProfileNotification from "@/app/(withDashboard)/_components/ProfileNotification";
 import UserDropdown from "../ui/UserDropdown";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const pathName = usePathname();
+  const currentPathNameArr = pathName.split("/");
 
   const user = false;
 
@@ -43,7 +46,9 @@ export default function Navbar() {
   // Contact
 
   return (
-    <div className="bg-[#222222]">
+    <div
+      className={`bg-[#222222] ${currentPathNameArr?.includes("dashboard") && "hidden"}`}
+    >
       <Container>
         <div className="flex shadow-md py-4 sm:px-10 md:px-0 bg-[#222222] min-h-[70px] tracking-wide relative z-50">
           <div className="flex flex-wrap items-center justify-between gap-5 w-full">
@@ -128,15 +133,15 @@ export default function Navbar() {
 
             {/* Right Buttons */}
             <div className="flex max-lg:ml-auto space-x-4">
-              {user ? (
+              {!user ? (
                 <div className="flex items-center gap-4">
                   <Link href="/signin">
-                    <button className="px-6 py-2 rounded-md border border-[#e8d39f] hover:bg-[#e8d39f] hover:text-black">
+                    <button className="md:px-6 md:py-2 sm:px-4 sm:py-1.5 px-3.5 py-1 rounded-md border! text-white border-[#e8d39f] transition-all delay-75 hover:bg-[#e8d39f] hover:text-black cursor-pointer">
                       Sign In
                     </button>
                   </Link>
                   <Link href="/signup">
-                    <button className="px-6 py-2 rounded-md bg-[#e8d39f] text-black hover:bg-[#d7c089]">
+                    <button className="md:px-6 md:py-2 sm:px-4 sm:py-1.5 px-3.5 py-1 rounded-md bg-[#e8d39f] text-black hover:bg-[#d7c089]  hover:cursor-pointer">
                       Sign Up
                     </button>
                   </Link>

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function ForgotPassword() {
   return (
     <div className="py-10 min-h-screen bg-[#222222]">
@@ -23,12 +25,14 @@ export default function ForgotPassword() {
           </div>
 
           {/* Login Button */}
-          <button
-            type="submit"
-            className="w-full bg-[#F3D29C] text-black py-3 rounded-md text-sm font-medium hover:bg-[#eac88d] transition"
-          >
-            Submit
-          </button>
+          <Link href="/confirmpassword">
+            <button
+              type="submit"
+              className="w-full bg-[#F3D29C] text-black py-3 rounded-md text-sm font-medium hover:bg-[#eac88d] transition cursor-pointer"
+            >
+              Submit
+            </button>
+          </Link>
         </form>
       </div>
     </div>

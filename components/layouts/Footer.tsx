@@ -1,12 +1,18 @@
+"use client";
 import { FaTwitter, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaBuilding } from "react-icons/fa6";
 import Container from "../shared/Container";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const pathName = usePathname();
+  const currentPathNameArr = pathName.split("/");
   return (
-    <div className="bg-[#222222] py-[50px] md:py-[50px]">
+    <div
+      className={`bg-[#222222] py-[50px] md:py-[50px] ${currentPathNameArr?.includes("dashboard") && "hidden"}`}
+    >
       <Container>
         <div className="w-full border-t border-[#e8d39f]/40 text-white py-16 md:py-20">
           <div className="max-w-7xl mx-auto px-6 flex justify-center">

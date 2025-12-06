@@ -6,6 +6,7 @@ import { HiOutlineEye, HiOutlineEyeOff } from "react-icons/hi";
 
 export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
+  const [showPassword2, setShowPassword2] = useState(false);
 
   return (
     <div className="py-10 min-h-screen bg-[#222222]">
@@ -48,10 +49,10 @@ export default function LoginPage() {
               />
               <button
                 type="button"
-                onClick={() => setShowPassword(!showPassword)}
+                onClick={() => setShowPassword2(!showPassword2)}
                 className="absolute right-3 top-3 text-gray-400"
               >
-                {showPassword ? (
+                {showPassword2 ? (
                   <HiOutlineEyeOff size={20} />
                 ) : (
                   <HiOutlineEye size={20} />

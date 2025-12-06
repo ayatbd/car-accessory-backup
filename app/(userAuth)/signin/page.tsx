@@ -50,7 +50,7 @@ export default function SignIn() {
               <div className="flex items-center justify-between">
                 <label className="text-lg">Password</label>
                 <Link
-                  href=""
+                  href="/forgotpassword"
                   className="text-sm text-[#FFE6B9] hover:underline"
                 >
                   Forgot
@@ -75,16 +75,6 @@ export default function SignIn() {
                   )}
                 </button>
               </div>
-            </div>
-
-            {/* Forgot password small link */}
-            <div className="flex justify-end -mt-2">
-              <a
-                href="/forgot-password"
-                className="text-sm text-gray-300 hover:underline"
-              >
-                Forgot Password?
-              </a>
             </div>
 
             {/* Login Button */}
