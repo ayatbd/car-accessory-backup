@@ -50,7 +50,14 @@
 
 /* Swiper Pagination Dots */
 .swiper2 {
-    margin: 0 90px !important;
+    margin: 0 5.625rem !important;
+}
+
+@media screen and (max-width: 768px) {
+    .swiper2 {
+        margin: 0 2.5rem !important;
+    }
+
 }
 
 .swiper-navigation-icon {

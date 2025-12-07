@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <section className="w-full text-white py-16 md:py-20">
       <Container>
-        <div className="px-4 md:px-6 md:grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 items-center">
           {/* LEFT CONTENT */}
           <div className="space-y-6 md:text-start text-center">
             {/* GOLD LINE + TITLE */}
