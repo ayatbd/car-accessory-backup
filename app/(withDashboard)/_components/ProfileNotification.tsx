@@ -50,7 +50,7 @@ const ProfileNotification = () => {
   return (
     <>
       <div
-        tabIndex="-1"
+        tabIndex={-1}
         className="dropdown-content menu bg-base-100 rounded-sm z-50 lg:w-[506px] md:w-[450px] w-[250px] lg:p-10 md:p-8 sm:p-3 shadow-sm"
       >
         <ul>

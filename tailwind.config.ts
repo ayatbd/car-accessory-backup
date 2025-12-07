@@ -11,9 +11,9 @@ const config: Config = {
     // Temporarily disabled to debug
     // require('daisyui'),
   ],
-  daisyui: {
-    themes: false,
-  },
+  // daisyui: {
+  //   themes: false,
+  // },
 };
 
 export default config;

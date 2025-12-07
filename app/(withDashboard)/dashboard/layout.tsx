@@ -22,11 +22,11 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }>) {
   // dynamic dashboard title
-  const pathname = usePathname();
+  const pathname = usePathname() || "";
   const [title, setTitle] = useState("Dashboard");
 
   // mapping from path -> title
-  const titleMap = useMemo(
+  const titleMap: Record<string, string> = useMemo(
     () => ({
       "/dashboard": "Dashboard",
       "/dashboard/users": "Users",
@@ -47,23 +47,27 @@ export default function DashboardLayout({
   const navbarColor = isDashboard ? "bg-[#181818]" : "bg-[#6B5E46]";
 
   useEffect(() => {
-    // If there's an exact mapping use it; otherwise derive from last segment
     if (!pathname) return;
+
     const mapped = titleMap[pathname];
+
+    // If mapping exists → update only if different
     if (mapped) {
-      setTitle(mapped);
+      if (mapped !== title) setTitle(mapped);
       return;
     }
 
-    // fallback: get last segment and capitalize
-    const parts = pathname.split("/").filter(Boolean); // removes empty
+    // Fallback title
+    const parts = pathname.split("/").filter(Boolean);
     const last = parts.length ? parts[parts.length - 1] : "dashboard";
     const friendly =
       last === "dashboard"
         ? "Dashboard"
         : last.charAt(0).toUpperCase() + last.slice(1);
-    setTitle(friendly);
-  }, [pathname, titleMap]);
+
+    // Set only if different
+    if (friendly !== title) setTitle(friendly);
+  }, [pathname, titleMap, title]);
 
   return (
     <PageTitleContext.Provider value={{ title, setTitle }}>

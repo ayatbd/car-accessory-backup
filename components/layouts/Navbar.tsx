@@ -8,12 +8,11 @@ import { MdSearch } from "react-icons/md";
 import { IoMdNotifications } from "react-icons/io";
 import ProfileNotification from "@/app/(withDashboard)/_components/ProfileNotification";
 import UserDropdown from "../ui/UserDropdown";
-import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const pathName = usePathname();
-  const currentPathNameArr = pathName.split("/");
+  // const pathName = usePathname();
+  // const currentPathNameArr = pathName.split("/");
 
   const user = false;
 
@@ -46,9 +45,7 @@ export default function Navbar() {
   // Contact
 
   return (
-    <div
-      className={`bg-[#222222] ${currentPathNameArr?.includes("dashboard") && "hidden"}`}
-    >
+    <div className={`bg-[#222222]`}>
       <Container>
         <div className="flex shadow-md py-4 sm:px-10 md:px-0 bg-[#222222] min-h-[70px] tracking-wide relative z-50">
           <div className="flex flex-wrap items-center justify-between gap-5 w-full">
